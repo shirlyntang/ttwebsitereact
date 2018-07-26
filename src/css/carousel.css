@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+img {
+  height: 100%;
+  max-width: 100%;
+}
+
+.theta-tau {
+  text-align: center;
+  text-transform: uppercase;
+  font: 7.2em "Raleway", sans-serif;
+  color: #fffdf9;
+  text-shadow: #000 0px 0px 7px;
+  -webkit-font-smoothing: antialiased;
+}

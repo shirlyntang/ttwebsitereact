@@ -12,7 +12,7 @@ export default class Navbar extends React.Component {
           <div className="container">
             <div className="navbar-header">
               <a href="#" class="navbar-brand">
-                Theta Tau | UCSB Colony
+                <strong>Theta Tau | UCSB Colony</strong>
               </a>
               <button
                 type="button"
