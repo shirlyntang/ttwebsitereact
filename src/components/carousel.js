@@ -1,7 +1,6 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
+import { Carousel } from "react-bootstrap";
 import "../css/carousel.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import home1 from "../images/Home/home_1.jpg";
 import home2 from "../images/Home/home_2.jpg";
@@ -13,33 +12,45 @@ export default class CarouselHome extends React.Component {
   render() {
     return (
       <div>
-        <Carousel
-          showArrows={true}
-          showIndicators={true}
-          showThumbs={false}
-          infiniteLoop
-          autoPlay
-        >
-          <div>
-            <img src={home1} alt="tt1" />
-          </div>
-          <div>
-            <img src={home2} alt="tt2" />
-            <p className="theta-tau">Theta Tau</p>
-          </div>
-          <div>
-            <img src={home3} alt="tt3" />
-            <p className="theta-tau">Theta Tau</p>
-          </div>
-          <div>
-            <img src={home4} alt="tt4" />
-            <p className="theta-tau">Theta Tau</p>
-          </div>
-          <div>
-            <img src={home5} alt="tt5" />
-            <p className="theta-tau">Theta Tau</p>
-          </div>
-        </Carousel>
+        <section id="slideshow">
+          <Carousel>
+            <Carousel.Item>
+              <img src={home1} alt="tt1" />
+              <Carousel.Caption>
+                <h1 id="theta-tau">Theta Tau</h1>
+                <p>Professional Co-ed Engineering Fraternity</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={home2} alt="tt2" />
+              <Carousel.Caption>
+                <h1 id="theta-tau">Theta Tau</h1>
+                <p>Professional Co-ed Engineering Fraternity</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={home3} alt="tt3" />
+              <Carousel.Caption>
+                <h1 id="theta-tau">Theta Tau</h1>
+                <p>Professional Co-ed Engineering Fraternity</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={home4} alt="tt4" />
+              <Carousel.Caption>
+                <h1 id="theta-tau">Theta Tau</h1>
+                <p>Professional Co-ed Engineering Fraternity</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={home5} alt="tt5" />
+              <Carousel.Caption>
+                <h1 id="theta-tau">Theta Tau</h1>
+                <p>Professional Co-ed Engineering Fraternity</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+        </section>
       </div>
     );
   }

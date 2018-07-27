@@ -8,8 +8,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <NavBar />
-        <Carousel />
+        <div>
+          <NavBar />
+        </div>
+        <div>
+          <Carousel />
+        </div>
       </div>
     );
   }
