@@ -1,9 +1,13 @@
 import React from "react";
+import {NavLink} from 'react-router-dom';
 import "../css/navbar.css";
+
+
 
 export default class Navbar extends React.Component {
   render() {
     return (
+    
       <div>
         <nav
           className="navbar default-default navbar-fixed-top"
@@ -11,9 +15,9 @@ export default class Navbar extends React.Component {
         >
           <div className="container">
             <div className="navbar-header">
-              <a href="#" class="navbar-brand">
+              <NavLink to="/" className="navbar-brand">
                 <strong>Theta Tau | UCSB Colony</strong>
-              </a>
+              </NavLink>
               <button
                 type="button"
                 className="navbar-toggle collapsed"
@@ -29,33 +33,45 @@ export default class Navbar extends React.Component {
             <div className="collapse navbar-collapse" id="navbar-collapse">
               <ul className="nav navbar-nav navbar-right">
                 <li>
-                  <a href="./index.html">Home</a>
+                  <NavLink to="./">Home</NavLink>
                 </li>
                 <li className="dropdown">
                   <a>About</a>
                   <ul className="dropdown-menu">
                     <li>
-                      <a href="./history.html">History</a>
+                      <NavLink to="./history">History</NavLink>
                     </li>
                     <li>
-                      <a href="./brotherhood.html">Brotherhood</a>
+                      <NavLink to="./brotherhood">Brotherhood</NavLink>
                     </li>
                     <li>
-                      <a href="./prodev.html">Professional</a>
+                      <NavLink to="./professional">Professional</NavLink>
                     </li>
                   </ul>
                 </li>
                 <li className="dropdown">
                   <a>Members</a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <NavLink to="./actives">Actives</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="./alumni">Alumni</NavLink>
+                    </li>
+                   
+                  </ul>
                 </li>
                 <li>
-                  <a href="./rush.html">Rush</a>
+                  <NavLink to="./rush">Rush</NavLink>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
+       
+        }
       </div>
+     
     );
   }
 }
