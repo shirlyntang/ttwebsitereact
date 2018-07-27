@@ -5,6 +5,8 @@ import NavBar from "./components/navbar";
 import Carousel from "./components/carousel";
 import Pillars from "./components/pillars";
 import AboutUs from "./components/about_us";
+import Rush from "./components/rush";
+import Footer from "./components/footer";
 
 class App extends Component {
   render() {
@@ -41,6 +43,12 @@ class App extends Component {
               "Promoting friendship and collaboration between fraternity members, brotherhood is one of the three key pillars of Theta Tau. Brothers of Theta Tau forge tightly-knit relationships through various brotherhood events, including socials, retreats, and friendly competition."
             }
           />
+        </div>
+        <div>
+          <Rush />
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     );
