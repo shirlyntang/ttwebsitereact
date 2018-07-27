@@ -11,11 +11,11 @@ export default class Pillars extends React.Component {
               <div className="col-md-12 pillars">
                 <img
                   id="pillar-image"
-                  src={require(`../images/Home/${this.props.pillar.picture}`)}
+                  src={require(`../images/Home/${this.props.picture}`)}
                   alt=""
                 />
-                <h1 id="which-pillar">{this.props.pillar.name}</h1>
-                <p id="description">{this.props.pillar.description}</p>
+                <h1 id="which-pillar">{this.props.name}</h1>
+                <p id="description">{this.props.description}</p>
               </div>
             </div>
           </div>
