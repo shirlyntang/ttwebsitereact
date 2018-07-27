@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+.container-fluid {
+  text-align: center;
+  max-width: 100%;
+}
+#pillar-image {
+  padding-top: 7.5%;
+  height: auto;
+  width: 50%;
+  max-width: 300px;
+  max-height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#which-pillar {
+  padding-top: 2.5%;
+  font: 4em "Raleway", sans-serif;
+  display: inline-block;
+  border-bottom: 5px solid #8b0000;
+  text-transform: uppercase;
+}
+
+#description {
+  padding-top: 2.5%;
+  margin: 1% 25%;
+  font: 1.2em "Raleway", sans-serif;
+  font-weight: bold;
+}
