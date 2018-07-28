@@ -2,13 +2,6 @@ import React, { Component } from "react";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import ReactDOM from "react-dom";
 
-import NavBar from "./components/navbar";
-import Carousel from "./components/carousel";
-import Pillars from "./components/pillars";
-import AboutUs from "./components/about_us";
-import RushHome from "./components/rushhome";
-import Footer from "./components/footer";
-
 import Actives from "./actives";
 import Alumni from "./alumni";
 import Brotherhood from "./brotherhood";

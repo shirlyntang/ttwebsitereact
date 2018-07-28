@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
+.red-accents {
+  color: #8b0000;
+}
+
 .navbar {
   z-index: 10;
   width: 100%;

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+#slideshow-rush {
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.carousel-caption {
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+#rush-text {
+  text-transform: uppercase;
+  font: 7.2em "Raleway", sans-serif;
+  color: #fffdf9;
+  text-shadow: #000 0px 0px 7px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  opacity: 0.95;
+}
