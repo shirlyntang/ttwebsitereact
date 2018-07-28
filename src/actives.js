@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 export default class Actives extends Component {
   render() {
@@ -16,3 +17,4 @@ export default class Actives extends Component {
     );
   }
 }
+ReactDOM.render(<Actives />, document.querySelector("#root"));

@@ -15,6 +15,7 @@ import Brotherhood from "./brotherhood";
 import Hist from "./history";
 import Professional from "./professional";
 import Rush from "./rush";
+import Home from "./home";
 
 class App extends Component {
   render() {
@@ -29,46 +30,9 @@ class App extends Component {
               <Route path="/history" component={Hist} />
               <Route path="/professional" component={Professional} />
               <Route path="/rush" component={Rush} />
+              <Route path="/" component={Home} />
+              <Route render={() => <h3>404 not found</h3>} />
             </Switch>
-            >
-            <div>
-              <NavBar />
-            </div>
-            <div>
-              <Carousel />
-            </div>
-            <div>
-              <AboutUs />
-            </div>
-            <div>
-              <Pillars
-                picture={"heart.svg"}
-                name={"Service"}
-                description={
-                  "The surrounding communities are very important to us. We believe that giving back to the community not only benefits the communities, but our brotherhood as well. Working alongside with our brothers creates a strong bond and allows us to grow and get involved."
-                }
-              />
-              <Pillars
-                picture={"graduation-cap.svg"}
-                name={"Professional Development"}
-                description={
-                  "At Theta Tau, we assist all of our members develop the professional skills needed in life after graduation. From resume workshops to company info sessions, our chapter strives to provide the tools needed for any career path. With the variety of skills and mentorship available from our network of engineers, one has the support needed to achieve the high level of professionalism we see in our members."
-                }
-              />
-              <Pillars
-                picture={"users.svg"}
-                name={"Brotherhood"}
-                description={
-                  "Promoting friendship and collaboration between fraternity members, brotherhood is one of the three key pillars of Theta Tau. Brothers of Theta Tau forge tightly-knit relationships through various brotherhood events, including socials, retreats, and friendly competition."
-                }
-              />
-            </div>
-            <div>
-              <RushHome />
-            </div>
-            <div>
-              <Footer />
-            </div>
           </div>
         </BrowserRouter>
       </div>
