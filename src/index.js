@@ -8,6 +8,7 @@ import Brotherhood from "./brotherhood";
 import Hist from "./history";
 import Professional from "./professional";
 import Rush from "./rush";
+import Service from "./service";
 import Home from "./home";
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
               <Route path="/brotherhood" component={Brotherhood} />
               <Route path="/history" component={Hist} />
               <Route path="/professional" component={Professional} />
+              <Route path="/service" component={Service} />
               <Route path="/rush" component={Rush} />
               <Route path="/" component={Home} />
               <Route render={() => <h3>404 not found</h3>} />

@@ -47,6 +47,9 @@ export default class NavBar extends React.Component {
                     <li>
                       <NavLink to="/professional">Professional</NavLink>
                     </li>
+                    <li>
+                      <NavLink to="/service">Service</NavLink>
+                    </li>
                   </ul>
                 </li>
                 <li className="dropdown">
