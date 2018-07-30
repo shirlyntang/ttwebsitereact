@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import ReactDOM from "react-dom";
 
 import NavBar from "./components/navbar";
 import Carousel from "./components/carousel";

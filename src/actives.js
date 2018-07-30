@@ -1,20 +1,15 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+
+import NavBar from "./components/navbar";
+import Footer from "./components/footer";
 
 export default class Actives extends Component {
   render() {
     return (
       <div>
-        <div>Actives</div>
-        <div>Actives</div>
-        <div>Actives</div>
-        <div>Actives</div>
-        <div>Actives</div>
-        <div>Actives</div>
-        <div>Actives</div>
-        <div>Actives</div>
+        <NavBar />
+        <Footer />
       </div>
     );
   }
 }
-ReactDOM.render(<Actives />, document.querySelector("#root"));
