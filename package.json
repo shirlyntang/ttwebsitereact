@@ -3,11 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "aphrodite": "^2.2.2",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
+    "react-grid-gallery": "^0.5.1",
+    "react-images": "^0.5.19",
+    "react-native-images-collage": "^3.0.3",
+    "react-native-photo-grid": "0.0.2",
     "react-responsive-carousel": "^3.1.41",
     "react-scripts": "1.1.4",
+    "react-scrolllock": "^3.0.1",
+    "react-transition-group": "^2.4.0",
     "reactstrap": "^6.3.0"
   },
   "scripts": {
