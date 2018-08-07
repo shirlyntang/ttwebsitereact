@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { getCurrentProfile } from "./actions/profileActions";
+import { getCurrentProfile } from "../actions/profileActions";
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -20,9 +20,7 @@ class Dashboard extends Component {
       if (Object.keys(profile).length > 0) {
         dashboardContent = (
           <div>
-            <p className="lead text-muted">
-              Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
-            </p>
+            <p>Welcome {user.name}</p>
             <Link to="/edit-profile" className="btn btn-light">
               <i className="fas fa-user-circle text-info mr-1" /> Edit Profile
             </Link>
@@ -33,7 +31,7 @@ class Dashboard extends Component {
           <div>
             <p className="lead text-muted"> Welcome {user.name}</p>
             <p>You have not yet set up a profile, please add some info.</p>
-            <Link to="create-profile" className="btn btn-lg  btn-info">
+            <Link to="/create-profile" className="btn btn-lg  btn-info">
               Create Profile{" "}
             </Link>
           </div>
@@ -45,7 +43,7 @@ class Dashboard extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4">Dahsboard</h1>
+              <h1 className="display-4">Dashboard</h1>
               {dashboardContent}
             </div>
           </div>

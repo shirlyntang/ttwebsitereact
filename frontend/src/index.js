@@ -8,12 +8,12 @@ import { Provider } from "react-redux";
 import { clearCurrentProfile } from "./actions/profileActions";
 import PrivateRoute from "./components/privateRoute";
 
-import EditProfile from "./editProfile";
-import CreateProfile from "./CreateProfile";
-import Register from "./register";
-import Login from "./login";
+import EditProfile from "./components/editProfile";
+import CreateProfile from "./components/CreateProfile";
+import Register from "./components/register";
+import Login from "./components/login";
 import store from "./store";
-import Dashboard from "./dashboard";
+import Dashboard from "./components/dashboard";
 
 import Actives from "./actives";
 import Alumni from "./alumni";
@@ -44,37 +44,34 @@ class App extends Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <div>
+          <div className="container">
+            <Route exact path="/actives" component={Actives} />
+            <Route exact path="/alumni" component={Alumni} />
+            <Route exact path="/brotherhood" component={Brotherhood} />
+            <Route exact path="/history" component={Hist} />
+            <Route exact path="/professional" component={Professional} />
+            <Route exact path="/service" component={Service} />
+            <Route exact path="/rush" component={Rush} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
             <Switch>
-              <Route path="/actives" component={Actives} />
-              <Route path="/alumni" component={Alumni} />
-              <Route path="/brotherhood" component={Brotherhood} />
-              <Route path="/history" component={Hist} />
-              <Route path="/professional" component={Professional} />
-              <Route path="/service" component={Service} />
-              <Route path="/rush" component={Rush} />
-              <Route exact path="/register" component={Register} />
-              <Route exact path="/login" component={Login} />
-              <Switch>
-                <PrivateRoute exact path="/dashboard" component={Dashboard} />
-              </Switch>
-              <Switch>
-                <PrivateRoute
-                  exact
-                  path="/create-profile"
-                  component={CreateProfile}
-                />
-              </Switch>
-              <Switch>
-                <PrivateRoute
-                  exact
-                  path="/edit-profile"
-                  component={EditProfile}
-                />
-              </Switch>
-              <Route path="/" component={Home} />
-              <Route render={() => <h3>404 not found</h3>} />
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
+            <Switch>
+              <PrivateRoute
+                exact
+                path="/create-profile"
+                component={CreateProfile}
+              />
+            </Switch>
+            <Switch>
+              <PrivateRoute
+                exact
+                path="/edit-profile"
+                component={EditProfile}
+              />
+            </Switch>
+            <Route exact path="/" component={Home} />
           </div>
         </BrowserRouter>
       </Provider>
