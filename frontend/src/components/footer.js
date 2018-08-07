@@ -1,8 +1,25 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../actions/authActions";
+import { clearCurrentProfile } from "../actions/profileActions";
 import "../css/footer.css";
 
-export default class Footer extends React.Component {
+class Footer extends React.Component {
+  onLogoutClick(e) {
+    e.preventDefault();
+    this.props.clearCurrentProfile();
+    this.props.logoutUser();
+  }
   render() {
+    const { isAuthenticated } = this.props.auth;
+
+    const authLink = (
+      <a href="" onClick={this.onLogoutClick.bind(this)}>
+        Logout
+      </a>
+    );
+    const guestLink = <div />;
     return (
       <div>
         <section id="footer">
@@ -14,7 +31,7 @@ export default class Footer extends React.Component {
                 Barbara
               </p>
               <p id="contact"> Contact us at: ucsbthetatau@gmail.com</p>
-              <a href="https://www.facebook.com/UCSBThetaTau/" target="_blank">
+              <a href="https://www.facebook.com/UCSBThetaTau/">
                 <img
                   id="fb-contact"
                   href="#"
@@ -22,6 +39,7 @@ export default class Footer extends React.Component {
                   class="img-responsive center-block"
                 />
               </a>
+              <div> {isAuthenticated ? authLink : guestLink}</div>
               <p id="copyright">
                 Website Designed By
                 <p>Temp for later</p>
@@ -33,3 +51,17 @@ export default class Footer extends React.Component {
     );
   }
 }
+
+Footer.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { logoutUser, clearCurrentProfile }
+)(Footer);

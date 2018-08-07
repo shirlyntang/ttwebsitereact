@@ -15,6 +15,9 @@ import Login from "./components/login";
 import store from "./store";
 import Dashboard from "./components/dashboard";
 
+import Footer from "./components/footer";
+import Navbar from "./components/navbar";
+
 import Actives from "./actives";
 import Alumni from "./alumni";
 import Brotherhood from "./brotherhood";
@@ -44,11 +47,13 @@ class App extends Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <div className="container">
+          <div>
+            <Navbar />
             <Route exact path="/actives" component={Actives} />
             <Route exact path="/alumni" component={Alumni} />
             <Route exact path="/history" component={Hist} />
             <Route exact path="/professional" component={Professional} />
+            <Route exact path="/brotherhood" component={Brotherhood} />
             <Route exact path="/service" component={Service} />
             <Route exact path="/rush" component={Rush} />
             <Route exact path="/register" component={Register} />
@@ -71,6 +76,7 @@ class App extends Component {
               />
             </Switch>
             <Route exact path="/" component={Home} />
+            <Footer />
           </div>
         </BrowserRouter>
       </Provider>

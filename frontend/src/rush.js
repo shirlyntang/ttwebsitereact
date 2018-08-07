@@ -1,15 +1,12 @@
 import React from "react";
 import "./css/rush.css";
 
-import NavBar from "./components/navbar";
-import Footer from "./components/footer";
 import RushCarousel from "./components/carousel_rush";
 import RushFAQPanel from "./components/rush_faq_panel";
 
 const Rush = () => {
   return (
     <div>
-      <NavBar />
       <RushCarousel />
       <div className="container-fluid">
         <div className="row">
@@ -24,7 +21,6 @@ const Rush = () => {
         </div>
       </div>
       <RushFAQPanel />
-      <Footer />
     </div>
   );
 };
