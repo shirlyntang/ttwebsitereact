@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logoutUser } from "../actions/authActions";
 import { clearCurrentProfile } from "../actions/profileActions";
@@ -19,7 +20,7 @@ class Footer extends React.Component {
         Logout
       </a>
     );
-    const guestLink = <div />;
+    const guestLink = <Link to="/login">Member Login</Link>;
     return (
       <div>
         <section id="footer">
@@ -41,8 +42,8 @@ class Footer extends React.Component {
               </a>
               <div> {isAuthenticated ? authLink : guestLink}</div>
               <p id="copyright">
-                Website Designed By
-                <p>Temp for later</p>
+                Website Designed and Created By
+                <p>Ethan Su &amp; Andrew Doan</p>
               </p>
             </div>
           </div>

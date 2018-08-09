@@ -6,18 +6,7 @@
 }
 
 #about-us {
-  background: -webkit-linear-gradient(
-      rgba(255, 255, 255, 0.25),
-      rgba(0, 0, 0, 0.55)
-    ),
-    url("../images/Home/about-us.png");
-  background: -o-linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.55)),
-    url("../images/Home/about-us.png");
-  background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.55)),
-    url("../images/Home/about-us.png");
-  background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.55)),
-    url("../images/Home/about-us.png");
-
+  background: url("../images/Home/about-us.png");
   height: 100vh;
   max-width: 100%;
   position: relative;
@@ -46,7 +35,7 @@
 }
 
 .purpose {
-  text-align: center;
+  max-width: 100%;
   padding-top: 22.5%;
   font: 1.5em "Raleway", sans-serif;
   font-weight: bold;
