@@ -2,13 +2,47 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
+const AWS = require("aws-sdk");
+const S3FS = require("s3fs");
+const fs = require("fs");
+const multiparty = require("connect-multiparty");
+const multipartyMiddleware = multiparty();
 
+const s3fsImpl = S3FS(process.env.BUCKET_NAME, {
+  accessKeyId: process.env.SECRET_KEY_ID,
+  secretAccessKey: process.env.SECRET_ACCESS_KEY
+});
+
+//s3fsImpl.create();
 // profile model
 const Profile = require("../../models/Profile");
 // user model
 const User = require("../../models/Users");
 
 const validateProfileInput = require("../../validation/profile");
+
+function uploadToS3(file) {
+  let s3bucket = new AWS.S3({
+    accessKeyId: process.env.IAM_USER_KEY,
+    secretAccessKey: process.env.IAM_USER_SECRET,
+    Bucket: process.env.BUCKET_NAME
+  });
+  s3bucket.createBucket(function() {
+    var params = {
+      Bucket: process.env.BUCKET_NAME,
+      Key: file.name,
+      Body: file.data
+    };
+    s3bucket.upload(params, function(err, data) {
+      if (err) {
+        console.log("error in callback");
+        console.log(err);
+      }
+      console.log("success");
+      console.log(data);
+    });
+  });
+}
 
 // @router  GET api/profile/test
 // @desc    test profile route
@@ -76,6 +110,9 @@ router.get("/handle/:handle", (req, res) => {
 // @router  POST api/profile
 // @desc    Create or edit user profile
 // @access  private
+
+router.use(multipartyMiddleware);
+
 router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
@@ -119,6 +156,39 @@ router.post(
         });
       }
     });
+  }
+);
+
+router.use(multipartyMiddleware);
+
+router.post(
+  "/uploadfiles",
+  passport.authenticate("jwt", { session: false }),
+  function(req, res) {
+    var file = req.files.file;
+    var stream = fs.createReadStream(file.path);
+    return s3fsImpl
+      .writeFile(file.originalFilename, stream)
+      .then(function(err) {
+        fs.unlink(file.path, function(err) {
+          if (err) console.log(err);
+        });
+        var currentUpload = `https://s3-us-west-1.amazonaws.com/image-upload-test-07302018/${
+          file.originalFilename
+        }`;
+        Profile.findOne({ user: req.user.id }).then(profile => {
+          if (profile) {
+            //update
+            Profile.findOneAndUpdate(
+              { user: req.user.id },
+              { $set: currentUpload },
+              { new: true }
+            )
+              .then(profile => res.json(profile))
+              .catch(err => console.log(err));
+          }
+        });
+      });
   }
 );
 

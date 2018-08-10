@@ -115,6 +115,10 @@ class CreateProfile extends React.Component {
                     error={errors.bio}
                     info="Talk about yourself and your accomplishments!!"
                   />
+                  <div className="field">
+                    <label>Image</label>
+                    <input className="image" type="file" />
+                  </div>
                   <input
                     type="submit"
                     value="Submit"

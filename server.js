@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const dotenv = require("dotenv");
+const multipart = require("connect-multiparty");
+const multipartMiddleware = multipart();
+const busboy = require("connect-busboy");
+const busboyBodyParser = require("busboy-body-parser");
 
 dotenv.config();
 
@@ -11,9 +15,13 @@ const profile = require("./routes/api/profile");
 
 const app = express();
 
+//app.use(busboy());
+
 //body parser
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+//app.use(busboyBodyParser());
 
 //db config
 const db = require("./config/keys").mongoURI;

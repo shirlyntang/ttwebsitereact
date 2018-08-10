@@ -7,13 +7,13 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <nav
+        <div
           className="navbar default-default navbar-fixed-top"
           role="navigation"
         >
           <div className="container">
             <div className="navbar-header">
-              <NavLink to="/" class="navbar-brand">
+              <NavLink to="/" className="navbar-brand">
                 <strong>
                   Theta Tau <span className="red-accents">|</span> UCSB Colony
                 </strong>
@@ -69,7 +69,7 @@ export default class NavBar extends React.Component {
               </ul>
             </div>
           </div>
-        </nav>
+        </div>
       </div>
     );
   }
