@@ -17,6 +17,7 @@ class EditProfile extends React.Component {
       whyIJoinTT: "",
       whatIEnjoyAboutTT: "",
       bio: "",
+      linkedIn: "",
       errors: {}
     };
     this.onChange = this.onChange.bind(this);
@@ -41,7 +42,8 @@ class EditProfile extends React.Component {
         hometown: profile.hometown,
         whyIJoinTT: profile.whyIJoinTT,
         whatIEnjoyAboutTT: profile.whatIEnjoyAboutTT,
-        bio: profile.bio
+        bio: profile.bio,
+        linkedIn: profile.linkedIn
       });
     }
   }
@@ -55,7 +57,8 @@ class EditProfile extends React.Component {
       hometown: this.state.hometown,
       whyIJoinTT: this.state.whyIJoinTT,
       whatIEnjoyAboutTT: this.state.whatIEnjoyAboutTT,
-      bio: this.state.bio
+      bio: this.state.bio,
+      linkedIn: this.state.linkedIn
     };
 
     this.props.createProfile(profileData, this.props.history);
@@ -131,6 +134,14 @@ class EditProfile extends React.Component {
                   onChange={this.onChange}
                   error={errors.bio}
                   info="Talk about yourself and your accomplishments!!"
+                />
+                <TextFieldGroup
+                  placeholder="* LinkedIn"
+                  name="linkedIn"
+                  value={this.state.linkedIn}
+                  onChange={this.onChange}
+                  error={errors.linkedIn}
+                  info="Copy and paste your LinkedIn URL here!"
                 />
                 <input
                   type="submit"

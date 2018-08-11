@@ -35,6 +35,10 @@ const ProfileSchema = new Schema({
     type: String,
     required: true
   },
+  linkedIn: {
+    type: String,
+    requried: true
+  },
   uploadedFileCloudinaryUrl: {
     type: String
   },

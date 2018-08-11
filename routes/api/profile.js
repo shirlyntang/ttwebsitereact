@@ -156,7 +156,8 @@ router.post(
     if (req.body.whatIEnjoyAboutTT)
       profileFields.whatIEnjoyAboutTT = req.body.whatIEnjoyAboutTT;
     if (req.body.bio) profileFields.bio = req.body.bio;
-    if (req.body.image) profileFields.image = req.body.image;
+    if (req.body.linkedIn) profileFields.linkedIn = req.body.linkedIn;
+
     // console.log(req.files);
     // cloudinary.v2.uploader.upload(req.file.path, (err, result) => {
     //   if (err) console.log(err);

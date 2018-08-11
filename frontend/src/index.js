@@ -17,7 +17,7 @@ import store from "./store";
 import Dashboard from "./components/dashboard";
 
 import Footer from "./components/footer";
-//import Navbar from "./components/navbar";
+import Navbar from "./components/navbar";
 
 import Actives from "./actives";
 import Alumni from "./alumni";
@@ -49,6 +49,7 @@ class App extends Component {
       <Provider store={store}>
         <BrowserRouter>
           <div>
+            <Navbar />
             <Route exact path="/actives" component={Actives} />
             <Route exact path="/alumni" component={Alumni} />
             <Route exact path="/history" component={Hist} />

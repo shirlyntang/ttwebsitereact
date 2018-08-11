@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+.container {
+  font: 1.2em "Raleway", sans-serif;
+}
+.dashboard {
+  padding-top: 5%;
+}
+
+#profileImage {
+  float: right;
+  max-width: 400px;
+  max-height: 400px;
+}
