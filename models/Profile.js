@@ -35,7 +35,7 @@ const ProfileSchema = new Schema({
     type: String,
     required: true
   },
-  file: {
+  uploadedFileCloudinaryUrl: {
     type: String
   },
   date: {

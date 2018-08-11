@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import { clearCurrentProfile } from "./actions/profileActions";
 import PrivateRoute from "./components/privateRoute";
 
+import ImageUpload from "./components/uploadimage";
 import EditProfile from "./components/editProfile";
 import CreateProfile from "./components/CreateProfile";
 import Register from "./components/register";
@@ -16,7 +17,7 @@ import store from "./store";
 import Dashboard from "./components/dashboard";
 
 import Footer from "./components/footer";
-import Navbar from "./components/navbar";
+//import Navbar from "./components/navbar";
 
 import Actives from "./actives";
 import Alumni from "./alumni";
@@ -48,7 +49,6 @@ class App extends Component {
       <Provider store={store}>
         <BrowserRouter>
           <div>
-            <Navbar />
             <Route exact path="/actives" component={Actives} />
             <Route exact path="/alumni" component={Alumni} />
             <Route exact path="/history" component={Hist} />
@@ -73,6 +73,13 @@ class App extends Component {
                 exact
                 path="/edit-profile"
                 component={EditProfile}
+              />
+            </Switch>
+            <Switch>
+              <PrivateRoute
+                exact
+                path="/image-upload"
+                component={ImageUpload}
               />
             </Switch>
             <Route exact path="/" component={Home} />

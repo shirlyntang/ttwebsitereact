@@ -2,16 +2,39 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const passport = require("passport");
-const AWS = require("aws-sdk");
-const S3FS = require("s3fs");
-const fs = require("fs");
-const multiparty = require("connect-multiparty");
-const multipartyMiddleware = multiparty();
+// const AWS = require("aws-sdk");
+// const S3FS = require("s3fs");
+// const fs = require("fs");
+// const path = require("path");
+// const multiparty = require("connect-multiparty");
+// const multipartyMiddleware = multiparty();
 
-const s3fsImpl = S3FS(process.env.BUCKET_NAME, {
-  accessKeyId: process.env.SECRET_KEY_ID,
-  secretAccessKey: process.env.SECRET_ACCESS_KEY
-});
+// const s3fsImpl = S3FS(process.env.BUCKET_NAME, {
+//   accessKeyId: process.env.SECRET_KEY_ID,
+//   secretAccessKey: process.env.SECRET_ACCESS_KEY
+// });
+
+// var multer = require("multer");
+// var storage = multer.diskStorage({
+//   filename: function(req, file, callback) {
+//     callback(null, Date.now() + file.originalname);
+//   }
+// });
+// var imageFilter = function(req, file, cb) {
+//   // accept image files only
+//   if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/i)) {
+//     return cb(new Error("Only image files are allowed!"), false);
+//   }
+//   cb(null, true);
+// };
+// var upload = multer({ storage: storage, fileFilter: imageFilter });
+
+// var cloudinary = require("cloudinary");
+// cloudinary.config({
+//   cloud_name: process.env.CLOUD_NAME,
+//   api_key: process.env.CLOUD_API_KEY,
+//   api_secret: process.env.CLOUD_API_SECRET_KEY
+// });
 
 //s3fsImpl.create();
 // profile model
@@ -21,28 +44,28 @@ const User = require("../../models/Users");
 
 const validateProfileInput = require("../../validation/profile");
 
-function uploadToS3(file) {
-  let s3bucket = new AWS.S3({
-    accessKeyId: process.env.IAM_USER_KEY,
-    secretAccessKey: process.env.IAM_USER_SECRET,
-    Bucket: process.env.BUCKET_NAME
-  });
-  s3bucket.createBucket(function() {
-    var params = {
-      Bucket: process.env.BUCKET_NAME,
-      Key: file.name,
-      Body: file.data
-    };
-    s3bucket.upload(params, function(err, data) {
-      if (err) {
-        console.log("error in callback");
-        console.log(err);
-      }
-      console.log("success");
-      console.log(data);
-    });
-  });
-}
+// function uploadToS3(file) {
+//   let s3bucket = new AWS.S3({
+//     accessKeyId: process.env.IAM_USER_KEY,
+//     secretAccessKey: process.env.IAM_USER_SECRET,
+//     Bucket: process.env.BUCKET_NAME
+//   });
+//   s3bucket.createBucket(function() {
+//     var params = {
+//       Bucket: process.env.BUCKET_NAME,
+//       Key: file.name,
+//       Body: file.data
+//     };
+//     s3bucket.upload(params, function(err, data) {
+//       if (err) {
+//         console.log("error in callback");
+//         console.log(err);
+//       }
+//       console.log("success");
+//       console.log(data);
+//     });
+//   });
+// }
 
 // @router  GET api/profile/test
 // @desc    test profile route
@@ -111,7 +134,7 @@ router.get("/handle/:handle", (req, res) => {
 // @desc    Create or edit user profile
 // @access  private
 
-router.use(multipartyMiddleware);
+//router.use(multipartyMiddleware);
 
 router.post(
   "/",
@@ -133,6 +156,11 @@ router.post(
     if (req.body.whatIEnjoyAboutTT)
       profileFields.whatIEnjoyAboutTT = req.body.whatIEnjoyAboutTT;
     if (req.body.bio) profileFields.bio = req.body.bio;
+    if (req.body.image) profileFields.image = req.body.image;
+    // console.log(req.files);
+    // cloudinary.v2.uploader.upload(req.file.path, (err, result) => {
+    //   if (err) console.log(err);
+    // });
 
     Profile.findOne({ user: req.user.id }).then(profile => {
       if (profile) {
@@ -159,37 +187,59 @@ router.post(
   }
 );
 
-router.use(multipartyMiddleware);
+// router.use(multipartyMiddleware);
 
 router.post(
   "/uploadfiles",
   passport.authenticate("jwt", { session: false }),
   function(req, res) {
-    var file = req.files.file;
-    var stream = fs.createReadStream(file.path);
-    return s3fsImpl
-      .writeFile(file.originalFilename, stream)
-      .then(function(err) {
-        fs.unlink(file.path, function(err) {
-          if (err) console.log(err);
-        });
-        var currentUpload = `https://s3-us-west-1.amazonaws.com/image-upload-test-07302018/${
-          file.originalFilename
-        }`;
-        Profile.findOne({ user: req.user.id }).then(profile => {
-          if (profile) {
-            //update
-            Profile.findOneAndUpdate(
-              { user: req.user.id },
-              { $set: currentUpload },
-              { new: true }
-            )
-              .then(profile => res.json(profile))
-              .catch(err => console.log(err));
-          }
-        });
-      });
+    const currentUpload = {
+      uploadedFileCloudinaryUrl: req.body.uploadedFileCloudinaryUrl
+    };
+    Profile.findOne({ user: req.user.id }).then(profile => {
+      if (profile) {
+        //update
+        Profile.findOneAndUpdate(
+          { user: req.user.id },
+          { $set: currentUpload },
+          { new: true }
+        )
+          .then(profile => res.json(profile))
+          .catch(err => console.log(err));
+      }
+    });
   }
 );
+
+// router.post(
+//   "/uploadfiles",
+//   passport.authenticate("jwt", { session: false }),
+//   function(req, res) {
+//     var file = req.files[0];
+//     var stream = fs.createReadStream(file.path);
+//     return s3fsImpl
+//       .writeFile(file.originalFilename, stream)
+//       .then(function(err) {
+//         fs.unlink(file.path, function(err) {
+//           if (err) console.log(err);
+//         });
+//         var currentUpload = `https://s3-us-west-1.amazonaws.com/image-upload-test-07302018/${
+//           file.originalFilename
+//         }`;
+//         Profile.findOne({ user: req.user.id }).then(profile => {
+//           if (profile) {
+//             //update
+//             Profile.findOneAndUpdate(
+//               { user: req.user.id },
+//               { $set: currentUpload },
+//               { new: true }
+//             )
+//               .then(profile => res.json(profile))
+//               .catch(err => console.log(err));
+//           }
+//         });
+//       });
+//   }
+// );
 
 module.exports = router;

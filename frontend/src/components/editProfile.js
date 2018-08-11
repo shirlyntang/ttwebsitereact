@@ -4,7 +4,6 @@ import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import TextFieldGroup from "./TextFieldGroup";
 import TextAreaFieldGroup from "./TextAreaFieldGroup";
-import ImageFieldGroup from "./ImageFieldGroup";
 import { createProfile, getCurrentProfile } from "../actions/profileActions";
 
 class EditProfile extends React.Component {
@@ -133,7 +132,6 @@ class EditProfile extends React.Component {
                   error={errors.bio}
                   info="Talk about yourself and your accomplishments!!"
                 />
-                <ImageFieldGroup name="file" />
                 <input
                   type="submit"
                   value="Submit"
