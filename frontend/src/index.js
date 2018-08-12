@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import { clearCurrentProfile } from "./actions/profileActions";
 import PrivateRoute from "./components/privateRoute";
 
+import ActiveBrothers from "./components/profiles";
 import ImageUpload from "./components/uploadimage";
 import EditProfile from "./components/editProfile";
 import CreateProfile from "./components/CreateProfile";
@@ -15,6 +16,7 @@ import Register from "./components/register";
 import Login from "./components/login";
 import store from "./store";
 import Dashboard from "./components/dashboard";
+import IndividualProfiles from "./components/individualprofile";
 
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
@@ -50,6 +52,11 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Navbar />
+            <Route
+              exact
+              path="/actives/:handle"
+              component={IndividualProfiles}
+            />
             <Route exact path="/actives" component={Actives} />
             <Route exact path="/alumni" component={Alumni} />
             <Route exact path="/history" component={Hist} />
@@ -59,6 +66,7 @@ class App extends Component {
             <Route exact path="/rush" component={Rush} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/actives" component={ActiveBrothers} />
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>

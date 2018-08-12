@@ -125,10 +125,6 @@ class CreateProfile extends React.Component {
                     error={errors.linkedIn}
                     info="Copy and paste your LinkedIn URL here!"
                   />
-                  <div className="field">
-                    <label>Image</label>
-                    <input className="image" type="file" />
-                  </div>
                   <input
                     type="submit"
                     value="Submit"

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import request from "superagent";
 import PropTypes from "prop-types";
+import "../css/uploadimage.css";
 
 import { uploadImage } from "../actions/profileActions";
 
@@ -71,16 +72,19 @@ class UploadImage extends React.Component {
             </Dropzone>
           </div>
 
-          <div>
+          <div className="container">
             {this.state.uploadedFileCloudinaryUrl === "" ? null : (
               <div>
                 <p>{this.state.uploadedFile.name}</p>
-                <img src={this.state.uploadedFileCloudinaryUrl} />
+                <img
+                  id="profileImage"
+                  src={this.state.uploadedFileCloudinaryUrl}
+                />
               </div>
             )}
           </div>
         </form>
-        <form onSubmit={this.onSubmit}>
+        <form onSubmit={this.onSubmit} id="btnsubmit">
           <input
             type="submit"
             value="Submit"

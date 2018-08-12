@@ -1,0 +1,8 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+#profilepic {
+  max-width: 250px;
+  max-height: 250px;
+  white-space: nowrap;
+}
