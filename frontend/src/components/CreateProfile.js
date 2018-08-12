@@ -17,6 +17,7 @@ class CreateProfile extends React.Component {
       whyIJoinTT: "",
       whatIEnjoyAboutTT: "",
       bio: "",
+      linkedIn: "",
       errors: {}
     };
     this.onChange = this.onChange.bind(this);
@@ -38,7 +39,8 @@ class CreateProfile extends React.Component {
       hometown: this.state.hometown,
       whyIJoinTT: this.state.whyIJoinTT,
       whatIEnjoyAboutTT: this.state.whatIEnjoyAboutTT,
-      bio: this.state.bio
+      bio: this.state.bio,
+      linkedIn: this.state.linkedIn
     };
 
     this.props.createProfile(profileData, this.props.history);
@@ -115,6 +117,18 @@ class CreateProfile extends React.Component {
                     error={errors.bio}
                     info="Talk about yourself and your accomplishments!!"
                   />
+                  <TextFieldGroup
+                    placeholder="* LinkedIn"
+                    name="linkedIn"
+                    value={this.state.linkedIn}
+                    onChange={this.onChange}
+                    error={errors.linkedIn}
+                    info="Copy and paste your LinkedIn URL here!"
+                  />
+                  <div className="field">
+                    <label>Image</label>
+                    <input className="image" type="file" />
+                  </div>
                   <input
                     type="submit"
                     value="Submit"

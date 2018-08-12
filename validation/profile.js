@@ -35,6 +35,9 @@ module.exports = function validateProfileInput(data) {
   if (validator.isEmpty(data.bio)) {
     errors.bio = "Tell me about yourself :)";
   }
+  if (validator.isEmpty(data.linkedIn)) {
+    errors.linkedIn = "Please include your LinkedIn!";
+  }
   return {
     errors,
     isValid: isEmpty(errors)

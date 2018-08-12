@@ -17,6 +17,7 @@ class EditProfile extends React.Component {
       whyIJoinTT: "",
       whatIEnjoyAboutTT: "",
       bio: "",
+      linkedIn: "",
       errors: {}
     };
     this.onChange = this.onChange.bind(this);
@@ -41,7 +42,8 @@ class EditProfile extends React.Component {
         hometown: profile.hometown,
         whyIJoinTT: profile.whyIJoinTT,
         whatIEnjoyAboutTT: profile.whatIEnjoyAboutTT,
-        bio: profile.bio
+        bio: profile.bio,
+        linkedIn: profile.linkedIn
       });
     }
   }
@@ -55,7 +57,8 @@ class EditProfile extends React.Component {
       hometown: this.state.hometown,
       whyIJoinTT: this.state.whyIJoinTT,
       whatIEnjoyAboutTT: this.state.whatIEnjoyAboutTT,
-      bio: this.state.bio
+      bio: this.state.bio,
+      linkedIn: this.state.linkedIn
     };
 
     this.props.createProfile(profileData, this.props.history);
@@ -73,72 +76,79 @@ class EditProfile extends React.Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Edit Profile</h1>
-              <p>
-                <small className="d-block pb-3">* = required fields</small>
-                <form onSubmit={this.onSubmit}>
-                  <TextFieldGroup
-                    placeholder="* Profile Handle"
-                    name="handle"
-                    value={this.state.handle}
-                    onChange={this.onChange}
-                    error={errors.handle}
-                    info="A unique handle for your profile url!"
-                  />
-                  <TextFieldGroup
-                    placeholder="* Year and Major"
-                    name="yearMajor"
-                    value={this.state.yearMajor}
-                    onChange={this.onChange}
-                    error={errors.yearMajor}
-                    info="What's your year and major :3"
-                  />
-                  <TextFieldGroup
-                    placeholder="* Pledge Class"
-                    name="pledgeClass"
-                    value={this.state.pledgeClass}
-                    onChange={this.onChange}
-                    error={errors.pledgeClass}
-                    info="Which did you cross in?"
-                  />
-                  <TextFieldGroup
-                    placeholder="* Hometown"
-                    name="hometown"
-                    value={this.state.hometown}
-                    onChange={this.onChange}
-                    error={errors.hometown}
-                    info="Where are you from?"
-                  />
-                  <TextFieldGroup
-                    placeholder="* Why did you Join Theta Tau"
-                    name="whyIJoinTT"
-                    value={this.state.whyIJoinTT}
-                    onChange={this.onChange}
-                    error={errors.whyIJoinTT}
-                    info="What was the reason you join Theta Tau?"
-                  />
-                  <TextFieldGroup
-                    placeholder="* What do you enjoy most about Theta Tau?"
-                    name="whatIEnjoyAboutTT"
-                    value={this.state.whatIEnjoyAboutTT}
-                    onChange={this.onChange}
-                    error={errors.whatIEnjoyAboutTT}
-                    info="What is your favorite thing about Theta Tau?"
-                  />
-                  <TextAreaFieldGroup
-                    placeholder="* Bio"
-                    name="bio"
-                    value={this.state.bio}
-                    onChange={this.onChange}
-                    error={errors.bio}
-                    info="Talk about yourself and your accomplishments!!"
-                  />
-                  <input
-                    type="submit"
-                    value="Submit"
-                    className="btn btn-info btn-block mt-4"
-                  />
-                </form>
-              </p>
+
+              <small className="d-block pb-3">* = required fields</small>
+              <form onSubmit={this.onSubmit}>
+                <TextFieldGroup
+                  placeholder="* Profile Handle"
+                  name="handle"
+                  value={this.state.handle}
+                  onChange={this.onChange}
+                  error={errors.handle}
+                  info="A unique handle for your profile url!"
+                />
+                <TextFieldGroup
+                  placeholder="* Year and Major"
+                  name="yearMajor"
+                  value={this.state.yearMajor}
+                  onChange={this.onChange}
+                  error={errors.yearMajor}
+                  info="What's your year and major :3"
+                />
+                <TextFieldGroup
+                  placeholder="* Pledge Class"
+                  name="pledgeClass"
+                  value={this.state.pledgeClass}
+                  onChange={this.onChange}
+                  error={errors.pledgeClass}
+                  info="Which did you cross in?"
+                />
+                <TextFieldGroup
+                  placeholder="* Hometown"
+                  name="hometown"
+                  value={this.state.hometown}
+                  onChange={this.onChange}
+                  error={errors.hometown}
+                  info="Where are you from?"
+                />
+                <TextFieldGroup
+                  placeholder="* Why did you Join Theta Tau"
+                  name="whyIJoinTT"
+                  value={this.state.whyIJoinTT}
+                  onChange={this.onChange}
+                  error={errors.whyIJoinTT}
+                  info="What was the reason you join Theta Tau?"
+                />
+                <TextFieldGroup
+                  placeholder="* What do you enjoy most about Theta Tau?"
+                  name="whatIEnjoyAboutTT"
+                  value={this.state.whatIEnjoyAboutTT}
+                  onChange={this.onChange}
+                  error={errors.whatIEnjoyAboutTT}
+                  info="What is your favorite thing about Theta Tau?"
+                />
+                <TextAreaFieldGroup
+                  placeholder="* Bio"
+                  name="bio"
+                  value={this.state.bio}
+                  onChange={this.onChange}
+                  error={errors.bio}
+                  info="Talk about yourself and your accomplishments!!"
+                />
+                <TextFieldGroup
+                  placeholder="* LinkedIn"
+                  name="linkedIn"
+                  value={this.state.linkedIn}
+                  onChange={this.onChange}
+                  error={errors.linkedIn}
+                  info="Copy and paste your LinkedIn URL here!"
+                />
+                <input
+                  type="submit"
+                  value="Submit"
+                  className="btn btn-info btn-block mt-4"
+                />
+              </form>
             </div>
           </div>
         </div>

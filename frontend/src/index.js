@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import { clearCurrentProfile } from "./actions/profileActions";
 import PrivateRoute from "./components/privateRoute";
 
+import ImageUpload from "./components/uploadimage";
 import EditProfile from "./components/editProfile";
 import CreateProfile from "./components/CreateProfile";
 import Register from "./components/register";
@@ -73,6 +74,13 @@ class App extends Component {
                 exact
                 path="/edit-profile"
                 component={EditProfile}
+              />
+            </Switch>
+            <Switch>
+              <PrivateRoute
+                exact
+                path="/image-upload"
+                component={ImageUpload}
               />
             </Switch>
             <Route exact path="/" component={Home} />

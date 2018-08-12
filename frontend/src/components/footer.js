@@ -36,15 +36,14 @@ class Footer extends React.Component {
                 <img
                   id="fb-contact"
                   href="#"
+                  alt="footer"
                   src="../images/Home/facebook.svg"
-                  class="img-responsive center-block"
+                  className="img-responsive center-block"
                 />
               </a>
               <div> {isAuthenticated ? authLink : guestLink}</div>
-              <p id="copyright">
-                Website Designed and Created By
-                <p>Ethan Su &amp; Andrew Doan</p>
-              </p>
+              <p id="copyright">Website Designed and Created By</p>
+              <p>Ethan Su &amp; Andrew Doan</p>
             </div>
           </div>
         </section>

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getCurrentProfile } from "../actions/profileActions";
+import "../css/dashboard.css";
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -19,10 +20,25 @@ class Dashboard extends Component {
     } else {
       if (Object.keys(profile).length > 0) {
         dashboardContent = (
-          <div>
-            <p>Welcome {user.name}</p>
+          <div className="container">
+            <img id="profileImage" src={profile.uploadedFileCloudinaryUrl} />
+            <p className="welcome">Welcome {user.name}</p>
+            <div>Handle: {profile.handle}</div>
+            <div>Year/Major: {profile.yearMajor}</div>
+            <div>Pledge Class: {profile.pledgeClass}</div>
+            <div>Hometown: {profile.hometown}</div>
+            <div>Why I joined Theta Tau: {profile.whyIJoinTT}</div>
+            <div>What I enjoy about Theta Tau: {profile.whatIEnjoyAboutTT}</div>
+            <div>About me: {profile.bio}</div>
+            <div>LinkedIn: {profile.linkedIn}</div>
+
+            <div />
             <Link to="/edit-profile" className="btn btn-light">
               <i className="fas fa-user-circle text-info mr-1" /> Edit Profile
+            </Link>
+            <Link to="/image-upload" className="btn btn-light">
+              {" "}
+              Upload Images{" "}
             </Link>
           </div>
         );

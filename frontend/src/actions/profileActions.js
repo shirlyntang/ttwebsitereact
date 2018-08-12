@@ -35,6 +35,13 @@ export const createProfile = (profileData, history) => dispatch => {
     );
 };
 
+export const uploadImage = (imageLink, history) => dispatch => {
+  axios
+    .post("/api/profile/uploadfiles", imageLink)
+    .then(res => history.push("/dashboard"))
+    .catch(err => console.log("unsuccessful"));
+};
+
 export const setProfileLoading = () => {
   return {
     type: PROFILE_LOADING
