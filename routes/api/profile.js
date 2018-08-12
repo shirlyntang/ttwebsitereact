@@ -156,6 +156,8 @@ router.post(
       profileFields.whatIEnjoyAboutTT = req.body.whatIEnjoyAboutTT;
     if (req.body.bio) profileFields.bio = req.body.bio;
     if (req.body.linkedIn) profileFields.linkedIn = req.body.linkedIn;
+    if (req.body.activeOrAlumni)
+      profileFields.activeOrAlumni = req.body.activeOrAlumni;
 
     // console.log(req.files);
     // cloudinary.v2.uploader.upload(req.file.path, (err, result) => {

@@ -18,6 +18,7 @@ class CreateProfile extends React.Component {
       whatIEnjoyAboutTT: "",
       bio: "",
       linkedIn: "",
+      activeOrAlumni: "",
       errors: {}
     };
     this.onChange = this.onChange.bind(this);
@@ -40,7 +41,8 @@ class CreateProfile extends React.Component {
       whyIJoinTT: this.state.whyIJoinTT,
       whatIEnjoyAboutTT: this.state.whatIEnjoyAboutTT,
       bio: this.state.bio,
-      linkedIn: this.state.linkedIn
+      linkedIn: this.state.linkedIn,
+      activeOrAlumni: this.state.activeOrAlumni
     };
 
     this.props.createProfile(profileData, this.props.history);
@@ -124,6 +126,14 @@ class CreateProfile extends React.Component {
                     onChange={this.onChange}
                     error={errors.linkedIn}
                     info="Copy and paste your LinkedIn URL here!"
+                  />
+                  <TextFieldGroup
+                    placeholder="* Are you an Active or Alumni?"
+                    name="activeOrAlumni"
+                    value={this.state.activeOrAlumni}
+                    onChange={this.onChange}
+                    error={errors.activeOrAlumni}
+                    info="Indicate Active or Alumni!"
                   />
                   <input
                     type="submit"

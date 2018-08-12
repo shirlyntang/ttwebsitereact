@@ -13,6 +13,10 @@ module.exports = function validateProfileInput(data) {
     ? data.whatIEnjoyAboutTT
     : "";
   data.bio = !isEmpty(data.bio) ? data.bio : "";
+  data.linkedIn = !isEmpty(data.linkedIn) ? data.linkedIn : "";
+  data.activeOrAlumni = !isEmpty(data.activeOrAlumni)
+    ? data.activeOrAlumni
+    : "";
 
   if (!validator.isLength(data.handle, { min: 2, max: 40 })) {
     errors.handle = "Handle must between 2 and 40 character";
@@ -37,6 +41,9 @@ module.exports = function validateProfileInput(data) {
   }
   if (validator.isEmpty(data.linkedIn)) {
     errors.linkedIn = "Please include your LinkedIn!";
+  }
+  if (validator.isEmpty(data.activeOrAlumni)) {
+    errors.activeOrAlumni = "Please include if you're active or alumni!";
   }
   return {
     errors,

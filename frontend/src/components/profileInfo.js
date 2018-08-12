@@ -15,6 +15,7 @@ class ProfileHeader extends Component {
         <div>What I enjoy about Theta Tau: {profile.whatIEnjoyAboutTT}</div>
         <div>About me: {profile.bio}</div>
         <div>LinkedIn: {profile.linkedIn}</div>
+        <div>Status: {profile.activeOrAlumni}</div>
       </div>
     );
   }

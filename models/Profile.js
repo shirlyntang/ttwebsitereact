@@ -39,6 +39,10 @@ const ProfileSchema = new Schema({
     type: String,
     requried: true
   },
+  activeOrAlumni: {
+    type: String,
+    required: true
+  },
   uploadedFileCloudinaryUrl: {
     type: String
   },
