@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import Typing from "../Home/typing";
 import Carousel from "../Home/carousel";
 import Pillars from "../Home/pillars";
 import AboutUs from "../Home/about_us";
@@ -9,6 +10,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
+        <Typing />
         <div>
           <Carousel />
         </div>
