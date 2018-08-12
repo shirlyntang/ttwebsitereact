@@ -4,9 +4,8 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import request from "superagent";
 import PropTypes from "prop-types";
-import "../css/uploadimage.css";
-
-import { uploadImage } from "../actions/profileActions";
+import "../../css/uploadimage.css";
+import { uploadImage } from "../../actions/profileActions";
 
 const CLOUDINARY_UPLOAD_PRESET = "vru4thg1";
 const CLOUDINARY_UPLOAD_URL =

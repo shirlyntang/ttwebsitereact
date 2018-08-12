@@ -1,6 +1,6 @@
 import React from "react";
 import { PanelGroup, Panel } from "react-bootstrap";
-import "../css/rush_faq_panel.css";
+import "../../css/rush_faq_panel.css";
 
 export default class rushFAQPanel extends React.Component {
   render() {
@@ -42,8 +42,8 @@ export default class rushFAQPanel extends React.Component {
               </Panel.Title>
             </Panel.Heading>
             <Panel.Body collapsible id="faq-answer">
-              You must have an academic GPA of 2.5 or above.<br /> You cannot be
-              an active member in a competing fraternity.
+              You must have an academic GPA of 2.5 or above.
+              <br /> You cannot be an active member in a competing fraternity.
             </Panel.Body>
           </Panel>
           <Panel eventKey="4">

@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/rushhome.css";
+import "../../css/rushhome.css";
 
 export default class Rush extends React.Component {
   render() {

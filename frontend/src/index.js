@@ -6,29 +6,29 @@ import setAuthToken from "./utils/setAuthTokens";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import { clearCurrentProfile } from "./actions/profileActions";
-import PrivateRoute from "./components/privateRoute";
+import PrivateRoute from "./components/Members/privateRoute";
 
-import ActiveBrothers from "./components/profiles";
-import ImageUpload from "./components/uploadimage";
-import EditProfile from "./components/editProfile";
-import CreateProfile from "./components/CreateProfile";
-import Register from "./components/register";
-import Login from "./components/login";
+import ActiveBrothers from "./components/Members/profiles";
+import ImageUpload from "./components/Members/uploadimage";
+import EditProfile from "./components/Members/editProfile";
+import CreateProfile from "./components/Members/CreateProfile";
+import Register from "./components/Members/register";
+import Login from "./components/Members/login";
 import store from "./store";
-import Dashboard from "./components/dashboard";
-import Profile from "./components/profile";
+import Dashboard from "./components/Members/dashboard";
+import Profile from "./components/Members/profile";
 
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 
-import Actives from "./actives";
-import Alumni from "./alumni";
-import Brotherhood from "./brotherhood";
-import Hist from "./history";
-import Professional from "./professional";
-import Rush from "./rush";
-import Service from "./service";
-import Home from "./home";
+import Actives from "./components/MainPages/actives";
+import Alumni from "./components/MainPages/alumni";
+import Brotherhood from "./components/MainPages/brotherhood";
+import Hist from "./components/MainPages/history";
+import Professional from "./components/MainPages/professional";
+import Rush from "./components/MainPages/rush";
+import Service from "./components/MainPages/service";
+import Home from "./components/MainPages/home";
 
 if (localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken);

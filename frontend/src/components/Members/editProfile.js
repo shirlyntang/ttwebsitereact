@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import TextFieldGroup from "./TextFieldGroup";
 import TextAreaFieldGroup from "./TextAreaFieldGroup";
-import { createProfile, getCurrentProfile } from "../actions/profileActions";
+import { createProfile, getCurrentProfile } from "../../actions/profileActions";
 
 class EditProfile extends React.Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class EditProfile extends React.Component {
         whatIEnjoyAboutTT: profile.whatIEnjoyAboutTT,
         bio: profile.bio,
         linkedIn: profile.linkedIn,
-        activeOrAlumni: this.state.activeOrAlumni
+        activeOrAlumni: profile.activeOrAlumni
       });
     }
   }

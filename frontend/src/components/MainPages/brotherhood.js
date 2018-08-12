@@ -1,6 +1,6 @@
 import React from "react";
 
-import Brotherhood_collage from "./components/brotherhood_collage";
+import Brotherhood_collage from "../brotherhood_collage";
 
 const Brotherhood = () => {
   return (

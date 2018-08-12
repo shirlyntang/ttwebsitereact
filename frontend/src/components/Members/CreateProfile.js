@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import TextFieldGroup from "./TextFieldGroup";
 import TextAreaFieldGroup from "./TextAreaFieldGroup";
-import { createProfile } from "../actions/profileActions";
+import { createProfile } from "../../actions/profileActions";
 
 class CreateProfile extends React.Component {
   constructor(props) {

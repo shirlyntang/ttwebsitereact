@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getProfiles } from "../actions/profileActions";
-import "../css/profiles.css";
+import { getProfiles } from "../../actions/profileActions";
+import "../../css/profiles.css";
 import ProfileMembers from "./profilemembers";
 
 class Profiles extends Component {

@@ -1,8 +1,8 @@
 import React from "react";
-import "./css/rush.css";
+import "../../css/rush.css";
 
-import RushCarousel from "./components/carousel_rush";
-import RushFAQPanel from "./components/rush_faq_panel";
+import RushCarousel from "../Rush/carousel_rush";
+import RushFAQPanel from "../Rush/rush_faq_panel";
 
 const Rush = () => {
   return (

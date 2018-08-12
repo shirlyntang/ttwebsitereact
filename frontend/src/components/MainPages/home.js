@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import Carousel from "./components/carousel";
-import Pillars from "./components/pillars";
-import AboutUs from "./components/about_us";
-import RushHome from "./components/rushhome";
+import Carousel from "../Home/carousel";
+import Pillars from "../Home/pillars";
+import AboutUs from "../Home/about_us";
+import RushHome from "../Home/rushhome";
 
 export default class Home extends Component {
   render() {
