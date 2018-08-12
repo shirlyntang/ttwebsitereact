@@ -16,7 +16,7 @@ import Register from "./components/register";
 import Login from "./components/login";
 import store from "./store";
 import Dashboard from "./components/dashboard";
-import IndividualProfiles from "./components/individualprofile";
+import Profile from "./components/profile";
 
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
@@ -52,11 +52,7 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Navbar />
-            <Route
-              exact
-              path="/actives/:handle"
-              component={IndividualProfiles}
-            />
+            <Route exact path="/actives/:handle" component={Profile} />
             <Route exact path="/actives" component={Actives} />
             <Route exact path="/alumni" component={Alumni} />
             <Route exact path="/history" component={Hist} />
