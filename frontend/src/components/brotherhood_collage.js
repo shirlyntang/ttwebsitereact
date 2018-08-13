@@ -1,5 +1,5 @@
 import React from "react";
-import Gallery from 'react-grid-gallery';
+import Gallery from 'react-photo-gallery';
 
 
 
@@ -13,52 +13,41 @@ import bro6 from "../images/Brotherhood/image6.jpg";
 const Brotherhood_collage = () => {
   const IMAGES =
 [{
-        src: {bro1},
-        thumbnail: {bro1},
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        caption: "Hi"
+        src: bro1,
+        width:16,
+        height:9
 },
 {
-        src: {bro2},
-        thumbnail: {bro2},
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption: "there"
+        src: bro2,
+        width:16,
+        height:9
 },
  
 {
-        src: {bro3},
-        thumbnail: {bro3},
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        caption:"bud"
+        src: bro3,
+        width:16,
+        height:9
 },
 {
-    src: {bro4},
-    thumbnail: {bro4},
-    thumbnailWidth: 320,
-    thumbnailHeight: 212,
-    caption: "there"
+    src: bro4,
+    width:4,
+        height:3
 },
 {
-    src: {bro5},
-    thumbnail: {bro5},
-    thumbnailWidth: 320,
-    thumbnailHeight: 212,
-    caption: "there"
+    src: bro5,
+    width:16,
+    height:9
 },
 {
-    src: {bro6},
-    thumbnail: {bro6},
-    thumbnailWidth: 320,
-    thumbnailHeight: 212,
-    caption: "there"
+    src: bro6,
+    width:16,
+    height:9
 }]
+let x=2;
   return (
     <div>
       
-      <Gallery images={IMAGES}/>
+      <Gallery columns={x} photos={IMAGES}/>
     
       </div>
   );
