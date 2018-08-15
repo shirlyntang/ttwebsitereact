@@ -22,7 +22,7 @@ body {
 
 #p-bro-text {
  padding: 10%;
-  font: 3em "Raleway", sans-serif;
+  font: 2.5em "Raleway", sans-serif;
   text-align: center;
 }
 .bro-text {
@@ -34,6 +34,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, .4);
+  width: 45%;
 }
 #bro-cover-text {
   color: white;
@@ -45,7 +47,4 @@ body {
   border-radius: 2px;
 
   -webkit-font-smoothing: antialiased;
-}
-#bro-cover-text:hover{
-  color:white;
 }

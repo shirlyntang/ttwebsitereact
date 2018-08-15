@@ -8,9 +8,9 @@ const Brotherhood = () => {
     <div>
       <section id="broHeader">
       <div className="bro-text">
-        <a id="bro-cover-text">
+        <div id="bro-cover-text">
                   Brotherhood
-        </a>
+        </div>
         </div>
       </section>
       <div>
