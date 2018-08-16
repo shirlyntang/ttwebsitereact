@@ -32,7 +32,7 @@ body {
     }
     
 #p-pro-text {
- padding: 10%;
+ padding: 5% 10% 5% 10% ;
   font: 2.5em "Raleway", sans-serif;
   text-align: center;
 }
