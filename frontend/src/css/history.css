@@ -14,6 +14,44 @@
     background-position: 0 20%;
 
   }
+#hist-info{
+   
+    width:90%;
+     padding:5%;
+    padding-left: 18%
+}
+#hist-info .tt-origins {
+   
+    margin-bottom: 10%;
+    text-align: center; }
+    #hist-info  .tt-origins h2 {
+   
+      font: 3.5em "Raleway", sans-serif; 
+      text-transform: uppercase;
+      color: #8B0000; 
+    
+    }
+    
+    #hist-info  .tt-origins p {
+        padding-top:5%;
+      font: 1.5em "Raleway", sans-serif; 
+      line-height: 1.5; }
+    #hist-info  .tt-origins img {
+        
+      height: 300px; }
+  #hist-info .ucsb-origins {
+    text-align: center;
+    margin-bottom: 10%; }
+    #hist-info  .ucsb-origins h2 {
+      font: 3.5em "Raleway", sans-serif; 
+      text-transform: uppercase;
+      color: #8B0000; 
+        padding-bottom: 1%;
+    }
+    #hist-info  .ucsb-origins p {
+        padding-top: 5%;
+      font: 1.5em "Raleway", sans-serif;
+      line-height: 1.5; }
 
   .hist-text {
  
@@ -28,7 +66,9 @@
     width: 35%;
     
   }
-
+.hist2{
+    width:90%
+}
   #hist-cover-text {
     color: white;
     font: 5em "Raleway", sans-serif;
