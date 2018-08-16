@@ -22,7 +22,10 @@ const Brotherhood = () => {
         </p>
         
       </div>
-      <div>
+      <div className="bro-h">
+        <span id="bro-h2">Our Brothers</span>
+      </div>
+      <div className="bro-collage">
         <Brotherhood_collage />
       </div>
       

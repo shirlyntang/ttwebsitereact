@@ -110,7 +110,7 @@ const Brotherhood_collage = () => {
     width:16,
     height:9
 }]
-let x=3;
+var x=3;
   return (
     <div>
       

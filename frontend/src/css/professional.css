@@ -1,5 +1,3 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Raleway");
 
 body {
     margin: 0;
@@ -10,36 +8,35 @@ body {
     width: 100%;
     color: #333;
   }
-  #broHeader{
+#proHeader{
     position: relative;
-    background: url("../images/Brotherhood/broCover.jpg");
+    background: url("../images/Professional/proCover.jpg");
     max-width: 100%;
     height: 100vh;
     position: relative;
     background-size: cover;
     background-position: 0 20%;
   }
-  .bro-h{
-    padding-left: 27%;
-    padding-bottom:5%;
-}
-.bro-h #bro-h2 {
-  font: 6em "Raleway", sans-serif; 
-  text-transform: uppercase;
-  color:  #333; 
- 
-    text-align: center;
-    border-bottom: 5px solid #8B0000;
-      display:inline-block;
-
+  .pro-h{
+      padding-left: 20%
   }
-#p-bro-text {
-padding: 5% 10% 5% 10% ;
+  .pro-h #pro-h2 {
+    font: 6em "Raleway", sans-serif; 
+    text-transform: uppercase;
+    color:  #333; 
+   
+      text-align: center;
+      border-bottom: 5px solid #8B0000;
+        display:inline-block;
+
+    }
+    
+#p-pro-text {
+ padding: 10%;
   font: 2.5em "Raleway", sans-serif;
   text-align: center;
-
 }
-.bro-text {
+.pro-text {
  
   text-align: center;
   position: absolute;
@@ -51,7 +48,7 @@ padding: 5% 10% 5% 10% ;
   text-shadow: #000 0px 0px 7px;
   width: 45%;
 }
-#bro-cover-text {
+#pro-cover-text {
   color: white;
   font: 5em "Raleway", sans-serif;
   padding: 15px 35px;
@@ -63,6 +60,6 @@ padding: 5% 10% 5% 10% ;
   -webkit-font-smoothing: antialiased;
 }
 
-.bro-collage{
-  padding:.5%
+.pro-collage{
+    padding:5%
 }

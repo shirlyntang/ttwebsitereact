@@ -18,7 +18,7 @@
    
     width:90%;
      padding:5%;
-    padding-left: 18%
+    padding-left: 15%
 }
 #hist-info .tt-origins {
    
@@ -62,7 +62,7 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, .4);
+    text-shadow: #000 0px 0px 7px;
     width: 35%;
     
   }
