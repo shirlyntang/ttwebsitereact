@@ -7,6 +7,7 @@ const multipart = require("connect-multiparty");
 const multipartMiddleware = multipart();
 const busboy = require("connect-busboy");
 const busboyBodyParser = require("busboy-body-parser");
+const path = require("path");
 
 dotenv.config();
 
@@ -41,6 +42,14 @@ require("./config/passport")(passport);
 //use routes
 app.use("/api/users", users);
 app.use("/api/profile", profile);
+
+if (process.env.NODE_ENV == "production") {
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 const port = process.env.PORT || 5000;
 
