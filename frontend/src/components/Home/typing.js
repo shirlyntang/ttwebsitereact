@@ -13,7 +13,7 @@ class Typing extends Component {
             cursor={{ show: false }}
             startDelay={1500}
           >
-            <span className="thetaTau">Theta Tau</span>
+            <span className="thetaTau">UCSB Theta Tau</span>
             <br />
             <span className="pillars">
               Service
