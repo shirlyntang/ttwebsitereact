@@ -15,7 +15,7 @@ class Typing extends Component {
           >
             <span className="thetaTau">UCSB Theta Tau</span>
             <br />
-            <span className="pillars">
+            <span className="pillars-typing">
               Service
               <span className="red-accents">
                 .<Typist.Delay ms={500} />
