@@ -1,7 +1,7 @@
 import React from "react";
 
-import Brotherhood_collage from "./components/brotherhood_collage";
-import "./css/brotherhood.css";
+import Brotherhood_collage from "../brotherhood_collage";
+import "../../css/brotherhood.css";
 
 const Brotherhood = () => {
   return (
