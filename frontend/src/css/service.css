@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -8,16 +7,16 @@ body {
     width: 100%;
     color: #333;
   }
-#proHeader{
+#servHeader{
     position: relative;
-    background: url("../images/Professional/proCover.jpg");
+    background: url("../images/Service/serviceCover.jpg");
     max-width: 100%;
     height: 100vh;
     position: relative;
     background-size: cover;
     background-position: 0 20%;
   }
-  .pro-text {
+  .serv-text {
  
     text-align: center;
     position: absolute;
@@ -29,7 +28,7 @@ body {
     text-shadow: #000 0px 0px 7px;
     width: 45%;
   }
-  #pro-cover-text {
+  #serv-cover-text {
     color: white;
     font: 5em "Raleway", sans-serif;
     padding: 15px 35px;
@@ -40,27 +39,12 @@ body {
   
     -webkit-font-smoothing: antialiased;
   }
-  #p-pro-text {
+  #p-serv-text {
     padding: 5% 10% 5% 10% ;
      font: 2.5em "Raleway", sans-serif;
      text-align: center;
    }
    
-  .pro-h{
-      padding-left: 20%
+  .service_collage{
+      padding: .5%;
   }
-  .pro-h #pro-h2 {
-    font: 6em "Raleway", sans-serif; 
-    text-transform: uppercase;
-    color:  #333; 
-   
-      text-align: center;
-      border-bottom: 5px solid #8B0000;
-        display:inline-block;
-
-    }
-    
-
-.pro-collage{
-    padding:5%
-}
