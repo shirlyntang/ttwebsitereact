@@ -8,7 +8,8 @@ import { Provider } from "react-redux";
 import { clearCurrentProfile } from "./actions/profileActions";
 import PrivateRoute from "./components/Members/privateRoute";
 
-import ActiveBrothers from "./components/Members/profiles";
+import ActiveBrothers from "./components/Members/profilesActives";
+import AlumniBrothers from "./components/Members/profilesAlumnis";
 import ImageUpload from "./components/Members/uploadimage";
 import EditProfile from "./components/Members/editProfile";
 import CreateProfile from "./components/Members/CreateProfile";
@@ -54,7 +55,7 @@ class App extends Component {
             <Navbar />
             <Route exact path="/actives/:handle" component={Profile} />
             <Route exact path="/actives" component={Actives} />
-            <Route exact path="/alumni" component={Alumni} />
+            <Route exact path="/alumni" component={AlumniBrothers} />
             <Route exact path="/history" component={Hist} />
             <Route exact path="/professional" component={Professional} />
             <Route exact path="/brotherhood" component={Brotherhood} />

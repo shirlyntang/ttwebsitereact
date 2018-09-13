@@ -17,9 +17,14 @@ class Profiles extends Component {
       profileItems = "loading";
     } else {
       if (profiles.length > 0) {
-        profileItems = profiles.map(profile => (
-          <ProfileMembers key={profile._id} profile={profile} />
-        ));
+        profileItems = profiles.map(
+          profile =>
+            profile.activeOrAlumni === "Active" ? (
+              <ProfileMembers key={profile._id} profile={profile} />
+            ) : (
+              ""
+            )
+        );
       } else {
         profileItems = <h4>No profiles found...</h4>;
       }

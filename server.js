@@ -3,10 +3,10 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const dotenv = require("dotenv");
-const multipart = require("connect-multiparty");
-const multipartMiddleware = multipart();
-const busboy = require("connect-busboy");
-const busboyBodyParser = require("busboy-body-parser");
+// const multipart = require("connect-multiparty");
+// const multipartMiddleware = multipart();
+// const busboy = require("connect-busboy");
+// const busboyBodyParser = require("busboy-body-parser");
 const path = require("path");
 
 dotenv.config();
