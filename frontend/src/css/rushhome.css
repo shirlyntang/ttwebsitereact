@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
-#rush-tt {
+
+#rushHHeader{
   position: relative;
   background: url("../images/Home/fallrush2018.jpg");
   max-width: 100%;
@@ -10,8 +11,8 @@
   background-size: cover;
   background-position: 0 20%;
 }
-.rush-tt-text {
-  padding-top: 10%;
+.rushH-text {
+
   text-align: center;
   position: absolute;
   top: 50%;
@@ -19,20 +20,24 @@
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  text-shadow: #000 0px 0px 7px;
+  width: 45%;
 }
-#rush-button {
-  color: #000;
-  font: 1.5em "Raleway", sans-serif;
+#rushH-cover-text {
+  color: white;
+  font: 5em "Raleway", sans-serif;
   padding: 15px 35px;
   text-transform: uppercase;
   text-decoration: none;
-  border: 2px solid #000;
+  border: 2px solid transparent;
   border-radius: 2px;
-  text-shadow: #000 0px 0px 7px;
+
   -webkit-font-smoothing: antialiased;
 }
-
-#rush-button:hover {
-  cursor: pointer;
-  color: #8b0000 !important;
+a{
+  color:white;
+}
+a:hover{
+  color:#8b0000;
+  text-decoration: none;
 }

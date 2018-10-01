@@ -5,17 +5,11 @@ export default class Rush extends React.Component {
   render() {
     return (
       <div>
-        <section id="rush-tt">
-          <div className="row">
-            <div className="col-xs-12">
-              <div className="rush-tt-text">
-                <a href="/rush" id="rush-button">
-                  Rush ΘΤ
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section id="rushHHeader">
+        <div className="rushH-text">
+          <div id="rushH-cover-text"><a href="/rush">Rush</a></div>
+        </div>
+      </section>
       </div>
     );
   }
