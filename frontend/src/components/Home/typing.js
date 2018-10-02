@@ -17,16 +17,16 @@ class Typing extends Component {
             <br />
             <span className="pillars-typing">
               Service
-              <span className="red-accents">
+              <span className="accents">
                 .<Typist.Delay ms={500} />
               </span>{" "}
               Professionalism
-              <span className="red-accents">
+              <span className="accents">
                 .<br />
                 <Typist.Delay ms={500} />
               </span>{" "}
               Brotherhood
-              <span className="red-accents">.</span>
+              <span className="accents">.</span>
             </span>
           </Typist>
         </section>

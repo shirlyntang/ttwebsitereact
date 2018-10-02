@@ -16,11 +16,16 @@ export default class AboutUs extends React.Component {
             </div>
             <div className="row">
               <div className="col-md-12 purpose">
+              <div className="purpose-title">
+              Our Purpose
+              </div>
+              <div className="purpose">
                 <span className="red-accents">" </span>
                 The purpose of Theta Tau is to develop and maintain a high
                 standard of professional interest among its members, and to
                 unite them in a strong bond of fraternal fellowship.
                 <span className="red-accents"> "</span>
+                </div>
               </div>
             </div>
           </div>

@@ -34,10 +34,18 @@
   font: 2.5em "Raleway", sans-serif;
   padding-top: 2%;
 }
-
+.purpose-title{
+  font: 3em "Raleway", sans-serif;
+  display: inline-block;
+  border-bottom: 5px solid #8b0000;
+  text-transform: uppercase;
+  padding-top:3%;
+}
 .purpose {
-  max-width: 100%;
-  padding-top: 22.5%;
+  
+  padding-left:5%;
+  padding-right:5%;
+  padding-top:2%;
   font: 1.5em "Raleway", sans-serif;
-  font-weight: bold;
+ 
 }

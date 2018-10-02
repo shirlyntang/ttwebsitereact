@@ -17,16 +17,18 @@
 }
 
 #which-pillar {
-  padding-top: 2.5%;
-  font: 4em "Raleway", sans-serif;
+  font: 5em "Raleway", sans-serif;
   display: inline-block;
   border-bottom: 5px solid #8b0000;
   text-transform: uppercase;
+
 }
 
 #description {
-  padding-top: 2.5%;
-  margin: 1% 25%;
-  font: 1.2em "Raleway", sans-serif;
-  font-weight: bold;
+   
+  padding-left:5%;
+  padding-right:5%;
+  padding-top:2%;
+  font: 2em "Raleway", sans-serif;
+  padding-bottom:3%;
 }
