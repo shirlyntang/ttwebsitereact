@@ -6,12 +6,13 @@
 }
 
 #about-us {
-  background: url("../images/Home/about-us.png");
+  padding-top: 70px;
   height: 100vh;
   max-width: 100%;
   position: relative;
   background-size: cover;
   background-position: top;
+  text-align: center;
 }
 .container-fluid {
   max-width: 100%;
