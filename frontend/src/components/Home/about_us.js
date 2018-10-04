@@ -10,7 +10,7 @@ export default class AboutUs extends React.Component {
                 <div id="wwa">
                   <h1 id="who-we-are">Theta Tau</h1>
                   <p id="who-we-are-description">
-                    The Largest and Oldest Co-Ed Enginnering Fraternity
+                    The Largest and Oldest Co-Ed Engineering Fraternity
                   </p>
                 
             </div>

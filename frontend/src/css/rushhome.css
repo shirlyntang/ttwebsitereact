@@ -16,7 +16,7 @@
 
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 90%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -27,18 +27,22 @@
 #rushH-cover-text {
   color: white;
   font: 5em "Raleway", sans-serif;
-  padding: 15px 35px;
+  padding: 0px;
   text-transform: uppercase;
   text-decoration: none;
-  border: 2px solid transparent;
-  border-radius: 2px;
+ 
 
   -webkit-font-smoothing: antialiased;
 }
-a{
+.rushLink{
+
   color:white;
+  border: 5px solid ;
+  border-color:white;
 }
-a:hover{
+.rushLink:hover{
   color:#8b0000;
+  border: 5px solid ;
+  border-color:#8b0000;
   text-decoration: none;
 }

@@ -7,7 +7,7 @@ export default class Rush extends React.Component {
       <div>
         <section id="rushHHeader">
         <div className="rushH-text">
-          <div id="rushH-cover-text"><a href="/rush">Rush</a></div>
+          <div id="rushH-cover-text"><a className="rushLink" href="/rush">Rush</a></div>
         </div>
       </section>
       </div>
