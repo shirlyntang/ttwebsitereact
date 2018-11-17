@@ -15,7 +15,7 @@ const Hist = () => {
       <section id="hist-info">
         <div className="tt-origins">
           <h2> Theta Tau Origins</h2>
-          <img src={hist1} />
+          <img src={hist1} alt="history1" />
           <p>
             Theta Tau was founded at the University of Minnesota in 1904 by
             Erich J. Schrader, Elwin L. Vinal, William M. Lewis, and Isaac B.
@@ -26,7 +26,7 @@ const Hist = () => {
         </div>
         <div className="ucsb-origins">
           <h2> UCSB Origins</h2>
-          <img src={hist2} className="hist2" />
+          <img src={hist2} className="hist2" alt="history2" />
           <p>
             The idea of bringing Theta Tau to UCSB started in Winter of 2016,
             when Brian Yan, Current Vice Regent, reached out to the national

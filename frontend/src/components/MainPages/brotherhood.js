@@ -1,6 +1,6 @@
 import React from "react";
 
-import Brotherhood_collage from "../brotherhood_collage";
+import BrotherhoodCollage from "../brotherhood_collage";
 import "../../css/brotherhood.css";
 
 const Brotherhood = () => {
@@ -22,7 +22,7 @@ const Brotherhood = () => {
         <span id="bro-h2">Our Brothers</span>
       </div>
       <div className="bro-collage">
-        <Brotherhood_collage />
+        <BrotherhoodCollage />
       </div>
     </div>
   );

@@ -24,6 +24,7 @@
     "concurrently": "^3.6.1",
     "connect-busboy": "0.0.2",
     "connect-multiparty": "^2.2.0",
+    "dotenv": "^6.1.0",
     "end-of-stream": "^1.4.1",
     "es6-promise": "^4.2.5",
     "express": "^4.16.4",
@@ -48,7 +49,6 @@
     "validator": "^10.9.0"
   },
   "devDependencies": {
-    "dotenv": "^6.1.0",
     "nodemon": "^1.18.6",
     "react-native-dotenv": "^0.2.0"
   }

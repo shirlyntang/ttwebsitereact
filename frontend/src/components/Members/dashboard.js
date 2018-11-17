@@ -21,7 +21,11 @@ class Dashboard extends Component {
       if (Object.keys(profile).length > 0) {
         dashboardContent = (
           <div className="container">
-            <img id="profileImage" src={profile.uploadedFileCloudinaryUrl} />
+            <img
+              id="profileImage"
+              src={profile.uploadedFileCloudinaryUrl}
+              alt="dashboard1"
+            />
             <p className="welcome">Welcome {user.name}</p>
             <div>Handle: {profile.handle}</div>
             <div>Year/Major: {profile.yearMajor}</div>

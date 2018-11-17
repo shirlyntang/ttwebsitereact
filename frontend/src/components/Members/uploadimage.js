@@ -74,10 +74,11 @@ class UploadImage extends React.Component {
           <div className="container">
             {this.state.uploadedFileCloudinaryUrl === "" ? null : (
               <div>
-                <p>{this.state.uploadedFile.name}</p>
+                <p>{this.state.uploadedFile.name} </p>
                 <img
                   id="profileImage"
                   src={this.state.uploadedFileCloudinaryUrl}
+                  alt="profileimage1"
                 />
               </div>
             )}

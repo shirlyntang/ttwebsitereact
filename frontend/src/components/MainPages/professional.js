@@ -1,6 +1,6 @@
 import React from "react";
 
-import Pro_collage from "../pro_collage";
+import ProCollage from "../pro_collage";
 import "../../css/professional.css";
 const Professional = () => {
   return (
@@ -22,7 +22,7 @@ const Professional = () => {
         <span id="pro-h2">Where We've Been</span>
       </div>
       <div className="pro-collage">
-        <Pro_collage />
+        <ProCollage />
       </div>
     </div>
   );

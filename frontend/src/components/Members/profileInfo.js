@@ -6,7 +6,11 @@ class ProfileHeader extends Component {
 
     return (
       <div className="container">
-        <img id="profileImage" src={profile.uploadedFileCloudinaryUrl} />
+        <img
+          id="profileImage"
+          src={profile.uploadedFileCloudinaryUrl}
+          alt="profileimage1"
+        />
         <div>Handle: {profile.handle}</div>
         <div>Year/Major: {profile.yearMajor}</div>
         <div>Pledge Class: {profile.pledgeClass}</div>
