@@ -43,7 +43,7 @@ class Footer extends React.Component {
               </a>
               <div> {isAuthenticated ? authLink : guestLink}</div>
               <p id="copyright">Website Designed and Created By</p>
-              <p>Ethan Su &amp; Andrew Doan</p>
+              <p> Ethan Su &amp; Andrew Doan </p>
             </div>
           </div>
         </section>
