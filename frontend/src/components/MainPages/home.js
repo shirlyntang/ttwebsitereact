@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Typing from "../Home/typing";
-import Carousel from "../Home/carousel";
+//import Carousel from "../Home/carousel";
 import Pillars from "../Home/pillars";
 import AboutUs from "../Home/about_us";
 import RushHome from "../Home/rushhome";
@@ -11,9 +11,8 @@ export default class Home extends Component {
     return (
       <div>
         <Typing />
-        <div>
-          <Carousel />
-        </div>
+
+        <div>{/*<Carousel />*/}</div>
         <div>
           <AboutUs />
         </div>
