@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import TextFieldGroup from "./TextFieldGroup";
+import { Link } from "react-router-dom";
 
 class Login extends Component {
   constructor() {
@@ -58,6 +59,9 @@ class Login extends Component {
               <p className="lead text-center">
                 Sign in to your Theta Tau account
               </p>
+              <p className="lead text-center">
+                <Link to="/register">Or Register Here</Link>
+              </p>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="Email Address"
@@ -77,6 +81,7 @@ class Login extends Component {
                   error={errors.password}
                 />
                 <input type="submit" className="btn btn-info btn-block mt-4" />
+                
               </form>
             </div>
           </div>
