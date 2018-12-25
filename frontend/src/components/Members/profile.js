@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import ProfileInfo from "./profileInfo";
 import { getProfileByHandle } from "../../actions/profileActions";
+import "../../css/profile.css";
 
 class Profile extends Component {
   componentDidMount() {
@@ -29,11 +30,12 @@ class Profile extends Component {
         <div>
           <div className="row">
             <div className="col-md-6">
+            <div className="butt">
               <Link to="/actives" className="btn btn-light mb-3 float-left">
                 Back To Profiles
               </Link>
             </div>
-            <div className="col-md-6" />
+            </div>
           </div>
           <ProfileInfo profile={profile} />
         </div>

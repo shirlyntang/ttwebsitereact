@@ -11,7 +11,7 @@ class Typing extends Component {
             className="home"
             avgTypingSpeed={1000}
             cursor={{ show: false }}
-            startDelay={1500}
+            startDelay={500}
           >
             <span className="thetaTau">UCSB Theta Tau</span>
             <br />

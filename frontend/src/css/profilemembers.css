@@ -5,4 +5,9 @@
   max-width: 250px;
   max-height: 250px;
   white-space: nowrap;
+  border:solid;
+    border-color: #8b0000;
+    border-width: 3px;
+    border-radius: 6%;
+    width: 55%;
 }

@@ -1,0 +1,22 @@
+.info{
+    background:#f0f0f0;
+    padding: 1%;
+    border:solid;
+    border-color: #8b0000;
+    border-width: 3px;
+    border-radius: 6%;
+    width: 55%;
+    
+}
+.category{
+    text-decoration:  underline;
+}
+.image{
+    border:solid;
+    border-color: #8b0000;
+    border-width: 3px;
+    border-radius: 6%;
+}
+.container{
+    padding-bottom:5%;
+}

@@ -14,14 +14,13 @@ class ProfileMembers extends Component {
             <div className="col-2">
               <img
                 src={profile.uploadedFileCloudinaryUrl}
-                className="rounded-circle"
                 id="profilepic"
                 alt="individualprofilepic"
               />
             </div>
             <div className="col-lg-6 col-md-4 col-8">
               <h3>{profile.user.name}</h3>
-              <Link to={`/actives/${profile.handle}`} className="btn btn-info">
+              <Link to={`/actives/${profile.handle}`} className="btn btn-light mb-3 float-left">
                 View Profile
               </Link>
             </div>

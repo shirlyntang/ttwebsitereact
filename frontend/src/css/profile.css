@@ -1,0 +1,16 @@
+.btn {
+    background-color: #8b0000;
+    border:solid;
+    border-color: #8b0000;
+    border-width: 3px;
+    color:white;
+    font-weight: bold;
+}
+.btn:hover{
+    color:black;
+    background-color: white;
+    border-color:  black;
+}
+.butt{
+    padding:3%;
+}

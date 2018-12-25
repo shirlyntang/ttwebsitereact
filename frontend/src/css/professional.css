@@ -47,7 +47,8 @@ body {
    }
    
   .pro-h{
-      padding-left: 20%
+      padding-left: 20%;
+      padding-bottom: 3%
   }
   .pro-h #pro-h2 {
     font: 6em "Raleway", sans-serif; 
