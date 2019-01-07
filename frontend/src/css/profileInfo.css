@@ -10,6 +10,7 @@
 }
 .category{
     text-decoration:  underline;
+    font-weight: bold;
 }
 .image{
     border:solid;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import "../../css/profileInfo.css";
 
 class ProfileHeader extends Component {
@@ -22,7 +23,7 @@ class ProfileHeader extends Component {
           <div className="category">Why I joined Theta Tau: </div> <div >{profile.whyIJoinTT}</div><div/>
           <div className="category">What I enjoy about Theta Tau: </div> < div >{profile.whatIEnjoyAboutTT}</div><div/>
           <div className="category">About me: </div> < div >{profile.bio}</div><div/>
-          <div className="category">LinkedIn: </div> <div >{profile.linkedIn}</div><div/>
+          <div className="category">LinkedIn: </div> <div ><a href={profile.linkedIn}>Click Here</a></div><div/>
           <div className="category">Status: </div> <div >{profile.activeOrAlumni}</div>
         </div>
       </div>
