@@ -4,6 +4,9 @@
 #profilepic {
   max-width: 250px;
   max-height: 250px;
+  object-fit: cover;
+  width:250px;
+  height:250px;
   white-space: nowrap;
   border:solid;
     border-color: #8b0000;
