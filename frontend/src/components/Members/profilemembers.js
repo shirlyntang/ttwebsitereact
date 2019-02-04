@@ -1,19 +1,25 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import ReactImageFallback from "react-image-fallback";
 //import isEmpty from "../../validation/is-empty";
 import "../../css/profilemembers.css";
-
+import defaultPic from "../../images/default.png";
 class ProfileMembers extends Component {
+  
   render() {
+ 
     const { profile } = this.props;
+
     return (
       <div>
         <div className="col-xs-12 col-sm-6 col-md-4">
           <div className="row">
             <div className="col-2">
-              <img
+            
+              <ReactImageFallback
                 src={profile.uploadedFileCloudinaryUrl}
+                fallbackImage={defaultPic}
                 id="profilepic"
                 alt="individualprofilepic"
               />

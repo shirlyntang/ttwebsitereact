@@ -37,14 +37,14 @@ const ProfileSchema = new Schema({
   },
   linkedIn: {
     type: String,
-    requried: true
+    required: true
   },
   activeOrAlumni: {
     type: String,
     required: true
   },
   uploadedFileCloudinaryUrl: {
-    type: String
+    type: String,
   },
   date: {
     type: Date,
