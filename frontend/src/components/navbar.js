@@ -15,7 +15,7 @@ export default class NavBar extends React.Component {
             <div className="navbar-header">
               <NavLink to="/" className="navbar-brand">
                 <strong>
-                  Theta Tau <span className="red-accents">|</span> UCSB Colony
+                  Theta Tau <span className="red-accents">|</span> Sigma Epsilon Chapter
                 </strong>
               </NavLink>
               <button

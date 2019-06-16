@@ -22,7 +22,7 @@ import Profile from "./components/Members/profile";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 
-import Actives from "./components/MainPages/actives";
+//import Actives from "./components/MainPages/actives";
 //import Alumni from "./components/MainPages/alumni";
 import Brotherhood from "./components/MainPages/brotherhood";
 import Hist from "./components/MainPages/history";

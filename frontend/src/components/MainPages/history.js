@@ -34,6 +34,11 @@ const Hist = () => {
             of hard work on the petition and gathering interest on campus, the
             founding class of 25 was initiated on February 5th, 2017. Theta Tau
             is the first and only co-ed engineering Fraternity at UCSB.
+
+            Theta Tau at UCSB was initiated as a chapter June 1, 2019 as Sigma Epsilon Chapter.
+            It is the 100th chapter of Theta Tau.
+
+            
           </p>
         </div>
       </section>
