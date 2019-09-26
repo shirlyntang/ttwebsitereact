@@ -20,6 +20,13 @@ import bro14 from "../images/Brotherhood/image14.jpg";
 import bro15 from "../images/Brotherhood/image15.jpg";
 import bro16 from "../images/Brotherhood/image16.jpg";
 import bro17 from "../images/Brotherhood/image17.jpg";
+import bro18 from "../images/Brotherhood/image18.jpg";
+import bro19 from "../images/Brotherhood/image19.jpg";
+import bro20 from "../images/Brotherhood/image20.jpg";
+import bro21 from "../images/Brotherhood/image21.JPG";
+import bro22 from "../images/Brotherhood/image22.JPG";
+import bro23 from "../images/Brotherhood/image23.jpg";
+import bro24 from "../images/Brotherhood/image24.jpeg";
 
 
 const Brotherhood_collage = () => {
@@ -107,6 +114,41 @@ const Brotherhood_collage = () => {
 },
 {
     src: bro17,
+    width:16,
+    height:9
+},
+{
+    src: bro18,
+    width:16,
+    height:9
+},
+{
+    src: bro19,
+    width:16,
+    height:9
+},
+{
+    src: bro20,
+    width:16,
+    height:9
+},
+{
+    src: bro21,
+    width:16,
+    height:9
+},
+{
+    src: bro22,
+    width:16,
+    height:9
+},
+{
+    src: bro23,
+    width:16,
+    height:9
+},
+{
+    src: bro24,
     width:16,
     height:9
 }]

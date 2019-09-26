@@ -17,7 +17,7 @@
 }
 
 #which-pillar {
-  font: 5em "Raleway", sans-serif;
+  font: 3.2em "Raleway", sans-serif;
   display: inline-block;
   border-bottom: 5px solid #8b0000;
   text-transform: uppercase;
@@ -29,6 +29,6 @@
   padding-left:5%;
   padding-right:5%;
   padding-top:2%;
-  font: 2em "Raleway", sans-serif;
+  font: 2.1em "Raleway", sans-serif;
   padding-bottom:3%;
 }

@@ -35,14 +35,14 @@
   padding-top: 2%;
 }
 .purpose-title{
-  font: 3em "Raleway", sans-serif;
+  font: 2.3em "Raleway", sans-serif;
   display: inline-block;
   border-bottom: 5px solid #8b0000;
   text-transform: uppercase;
   padding-top:3%;
 }
 .purpose {
-  
+  font: 1.5em;
   padding-left:5%;
   padding-right:5%;
   padding-top:2%;

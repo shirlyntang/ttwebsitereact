@@ -5,7 +5,7 @@
 #rushHHeader{
  
   position: relative;
-  background: url("../images/Home/fallrush2018.jpg");
+  background: url("../images/Home/fallrush2019.png");
   max-width: 100%;
   height: 100vh;
   position: relative;
@@ -16,7 +16,7 @@
 
   text-align: center;
   position: absolute;
-  top: 90%;
+  top: 44%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);

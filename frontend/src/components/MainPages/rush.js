@@ -12,7 +12,7 @@ const Rush = () => {
         <div className="row">
           <div className="col-xs-12">
             <h1 id="h-rush-text">
-              Fall Rush 2018 will start the first week (10/1 - 10/5)
+              Fall Rush 2019 will start week 1 of the quarter (9/30 - 10/4)
             </h1>
             <p id="p-rush-text">Come to the Arbor and check us out!</p>
             <br />
