@@ -31,7 +31,7 @@ const db = require("./config/keys").mongoURI;
 mongoose
   .connect(process.env.mongoURI || db, { useNewUrlParser: true })
   .then(() => console.log("MongoDB connected"))
-  .catch(err => console.log("mongoURI: " + process.env.mongoURI + " error: " + err));
+  .catch(err => console.log(err));
 
 //passport middleware
 app.use(passport.initialize());
