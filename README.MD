@@ -16,7 +16,7 @@ as they wish. Other possible new features:
 This project is currently in the development phase.
 ### Running the project
 #### Prerequisites
-Please make your own database on mLab when working on this repo. Make sure you have dotenv install and .env added to your gitignore! Create a file in your root directory called .env and added two variables into the file called MONGO_DB and SECRET_OR_KEY and add the corresponding values into each variable.
+Please make your own database on mLab when working on this repo. Make sure you have dotenv install and .env added to your gitignore! Create a file in your root directory called .env and added two variables into the file called MONGO_URI and SECRET_OR_KEY and add the corresponding values into each variable.
 #### Running
 Running the project is simple. In the root directory, type in the command "npm run dev" and this command will run both the frontend and backend of the project. 
 
