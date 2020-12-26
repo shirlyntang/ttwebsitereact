@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+//import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import ReactDOM from "react-dom";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthTokens";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import { clearCurrentProfile } from "./actions/profileActions";
-import PrivateRoute from "./components/Members/privateRoute";
+//import PrivateRoute from "./components/Members/privateRoute";
 
 import ActiveBrothers from "./components/Members/profilesActives";
 import AlumniBrothers from "./components/Members/profilesAlumnis";
@@ -16,7 +17,7 @@ import AlumniBrothers from "./components/Members/profilesAlumnis";
 //import Register from "./components/Members/register";
 //import Login from "./components/Members/login";
 import store from "./store";
-import Dashboard from "./components/Members/dashboard";
+//import Dashboard from "./components/Members/dashboard";
 import Profile from "./components/Members/profile";
 
 import Footer from "./components/footer";
