@@ -17,7 +17,7 @@ import AlumniBrothers from "./components/Members/profilesAlumnis";
 //import Register from "./components/Members/register";
 //import Login from "./components/Members/login";
 import store from "./store";
-//import Dashboard from "./components/Members/dashboard";
+import Dashboard from "./components/Members/dashboard";
 import Profile from "./components/Members/profile";
 
 import Footer from "./components/footer";
