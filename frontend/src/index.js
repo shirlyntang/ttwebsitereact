@@ -10,11 +10,11 @@ import PrivateRoute from "./components/Members/privateRoute";
 
 import ActiveBrothers from "./components/Members/profilesActives";
 import AlumniBrothers from "./components/Members/profilesAlumnis";
-import ImageUpload from "./components/Members/uploadimage";
-import EditProfile from "./components/Members/editProfile";
-import CreateProfile from "./components/Members/CreateProfile";
-import Register from "./components/Members/register";
-import Login from "./components/Members/login";
+//import ImageUpload from "./components/Members/uploadimage";
+//import EditProfile from "./components/Members/editProfile";
+//import CreateProfile from "./components/Members/CreateProfile";
+//import Register from "./components/Members/register";
+//import Login from "./components/Members/login";
 import store from "./store";
 import Dashboard from "./components/Members/dashboard";
 import Profile from "./components/Members/profile";
@@ -46,6 +46,35 @@ if (localStorage.jwtToken) {
   }
 }
 
+/*
+<Route exact path="/register" component={Register} />
+<Route exact path="/login" component={Login} />
+<Switch>
+  <PrivateRoute exact path="/dashboard" component={Dashboard} />
+</Switch>
+<Switch>
+  <PrivateRoute
+    exact
+    path="/create-profile"
+    component={CreateProfile}
+  />
+</Switch>
+<Switch>
+  <PrivateRoute
+    exact
+    path="/edit-profile"
+    component={EditProfile}
+  />
+</Switch>
+<Switch>
+  <PrivateRoute
+    exact
+    path="/image-upload"
+    component={ImageUpload}
+  />
+</Switch>
+*/
+
 class App extends Component {
   render() {
     return (
@@ -60,33 +89,7 @@ class App extends Component {
             <Route exact path="/brotherhood" component={Brotherhood} />
             <Route exact path="/service" component={Service} />
             <Route exact path="/rush" component={Rush} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} />
             <Route exact path="/actives" component={ActiveBrothers} />
-            <Switch>
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
-            </Switch>
-            <Switch>
-              <PrivateRoute
-                exact
-                path="/create-profile"
-                component={CreateProfile}
-              />
-            </Switch>
-            <Switch>
-              <PrivateRoute
-                exact
-                path="/edit-profile"
-                component={EditProfile}
-              />
-            </Switch>
-            <Switch>
-              <PrivateRoute
-                exact
-                path="/image-upload"
-                component={ImageUpload}
-              />
-            </Switch>
             <Route exact path="/" component={Home} />
             <Footer />
           </div>

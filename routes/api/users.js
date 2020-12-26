@@ -19,7 +19,7 @@ router.get("/test", (req, res) => res.json({ msg: "Users Works!" }));
 // @router  POST api/users/register
 // @desc    register user
 // @access  Public
-router.post("/register", (req, res) => {
+/*router.post("/register", (req, res) => {
   const { errors, isValid } = validateRegisterInput(req.body);
 
   //check validation
@@ -49,12 +49,12 @@ router.post("/register", (req, res) => {
       });
     }
   });
-});
+});*/
 
 // @router  Post api/users/login
 // @desc    login user
 // @access  Public
-router.post("/login", (req, res) => {
+/*router.post("/login", (req, res) => {
   const { errors, isValid } = validateLoginInput(req.body);
 
   if (!isValid) {
@@ -93,12 +93,12 @@ router.post("/login", (req, res) => {
       }
     });
   });
-});
+});*/
 
 // @router  GET api/users/current
 // @desc    return current user
 // @access  private
-router.get(
+/*router.get(
   "/current",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
@@ -108,6 +108,6 @@ router.get(
       email: req.user.email
     });
   }
-);
+);*/
 
 module.exports = router;

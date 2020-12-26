@@ -7,12 +7,14 @@ import { clearCurrentProfile } from "../actions/profileActions";
 import "../css/footer.css";
 
 class Footer extends React.Component {
-  onLogoutClick(e) {
+  /*onLogoutClick(e) {
     e.preventDefault();
     this.props.clearCurrentProfile();
     this.props.logoutUser();
-  }
+  }*/
+
   render() {
+    /*
     const { isAuthenticated } = this.props.auth;
 
     const authLink = (
@@ -21,6 +23,8 @@ class Footer extends React.Component {
       </a>
     );
     const guestLink = <Link to="/login">Member Login</Link>;
+    */
+    //html code: <div> {isAuthenticated ? authLink : guestLink}</div>
     return (
       <div>
         <section id="footer">
@@ -41,7 +45,6 @@ class Footer extends React.Component {
                   className="img-responsive center-block"
                 />
               </a>
-              <div> {isAuthenticated ? authLink : guestLink}</div>
               <p id="copyright">Website Designed and Created By</p>
               <p> Ethan Su &amp; Andrew Doan </p>
             </div>
@@ -51,11 +54,11 @@ class Footer extends React.Component {
     );
   }
 }
-
+/*
 Footer.propTypes = {
   logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
-};
+};*/
 
 const mapStateToProps = state => ({
   auth: state.auth
