@@ -14,9 +14,8 @@ class Profiles extends Component {
     let profileItems;
 
     if (profiles === null || loading) {
-      profileItems = "loading";
+      profileItems = "loading...";
     } else {
-      console.log(profiles);
       if (profiles.length > 0) {
         profileItems = profiles.map(
           profile =>
@@ -36,6 +35,7 @@ class Profiles extends Component {
           <div className="row">
             <div className="col-md-12">
               <h1 className="display-4 text-center">Alumni Members</h1>
+              <br/>
             </div>
             {profileItems}
           </div>

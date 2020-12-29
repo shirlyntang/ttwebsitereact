@@ -14,7 +14,7 @@ class Profiles extends Component {
     let profileItems;
 
     if (profiles === null || loading) {
-      profileItems = "loading";
+      profileItems = "loading...";
     } else {
       if (profiles.length > 0) {
         profileItems = profiles.map(
@@ -35,6 +35,7 @@ class Profiles extends Component {
           <div className="row">
             <div className="col-md-12">
               <h1 className="display-4 text-center">Active Members</h1>
+              <br/>
             </div>
             {profileItems}
           </div>

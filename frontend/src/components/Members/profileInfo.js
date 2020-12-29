@@ -6,7 +6,7 @@ class ProfileHeader extends Component {
   render() {
     const { profile } = this.props;
 
-    if (profile.activeOrAlumni == "Active")
+    if (profile.activeOrAlumni === "Active")
     {
       return (
         <div className="container">

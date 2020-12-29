@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
 #profilepic {
-  max-width: 250px;
+  /*max-width: 250px;*/
   max-height: 250px;
   object-fit: cover;
-  width:250px;
+  width:500px;
   height:250px;
   white-space: nowrap;
   border:solid;
@@ -13,4 +13,11 @@
     border-width: 3px;
     border-radius: 6%;
     width: 55%;
+}
+
+#name {
+  text-align: center;
+  width: 110%;
+  height:110px;
+  max-height: 110px;
 }
