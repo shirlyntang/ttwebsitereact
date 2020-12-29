@@ -31,9 +31,9 @@ class Profile extends Component {
           <div className="row">
             <div className="col-md-6">
             <div className="butt">
-              <Link to="/actives" className="btn btn-light mb-3 float-left">
-                Back To Profiles
-              </Link>
+            { profile.activeOrAlumni === "Active" ? 
+              <Link to="/actives" className="btn btn-light mb-3 float-left"> Back To Profiles </Link>
+              : <Link to="/alumni" className="btn btn-light mb-3 float-left"> Back To Profiles </Link> }
             </div>
             </div>
           </div>

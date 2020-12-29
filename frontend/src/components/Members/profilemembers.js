@@ -25,10 +25,10 @@ class ProfileMembers extends Component {
               />
             </div>
             <div className="col-lg-6 col-md-4 col-8">
-              <h3>{profile.user.name}</h3>
-              <Link to={`/actives/${profile.handle}`} className="btn btn-light mb-3 float-left">
-                View Profile
-              </Link>
+              <h3>{profile.name}</h3>
+              { profile.activeOrAlumni === "Active" ? 
+              <Link to={`/actives/${profile.handle}`} className="btn btn-light mb-3 float-left"> View Profile </Link>
+              : <Link to={`/alumni/${profile.handle}`} className="btn btn-light mb-3 float-left"> View Profile </Link> }
             </div>
           </div>
         </div>

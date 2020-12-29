@@ -84,6 +84,7 @@ class App extends Component {
           <div>
             <Navbar />
             <Route exact path="/actives/:handle" component={Profile} />
+            <Route exact path="/alumni/:handle" component={Profile} />
             <Route exact path="/alumni" component={AlumniBrothers} />
             <Route exact path="/history" component={Hist} />
             <Route exact path="/professional" component={Professional} />
