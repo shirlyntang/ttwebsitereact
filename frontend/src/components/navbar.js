@@ -66,6 +66,9 @@ export default class NavBar extends React.Component {
                 <li>
                   <NavLink to="/rush">Rush</NavLink>
                 </li>
+                <li>
+                  <NavLink to="/contactus">Contact Us</NavLink>
+                </li>
               </ul>
             </div>
           </div>

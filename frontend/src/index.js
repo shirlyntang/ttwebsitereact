@@ -31,6 +31,7 @@ import Professional from "./components/MainPages/professional";
 import Rush from "./components/MainPages/rush";
 import Service from "./components/MainPages/service";
 import Home from "./components/MainPages/home";
+import ContactUs from "./components/MainPages/contact-us";
 
 if (localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken);
@@ -91,6 +92,7 @@ class App extends Component {
             <Route exact path="/service" component={Service} />
             <Route exact path="/rush" component={Rush} />
             <Route exact path="/actives" component={ActiveBrothers} />
+            <Route exact path="/contactus" component={ContactUs} />
             <Route exact path="/" component={Home} />
             <Footer />
           </div>
