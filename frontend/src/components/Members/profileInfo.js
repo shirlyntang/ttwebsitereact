@@ -46,6 +46,7 @@ class ProfileHeader extends Component {
           <div className="category">Pledge Class: </div> <div >{profile.pledgeClass}</div><div/>
           <div className="category">LinkedIn: </div> <div ><a href={profile.linkedIn}>Click Here</a></div><div/>
           <div className="category">Status: </div> <div >{profile.activeOrAlumni}</div>
+          <div className="category">Graduation Year: </div> <div >{profile.gradYear}</div>
         </div>
       </div>
     );
