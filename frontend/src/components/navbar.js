@@ -42,7 +42,7 @@ export default class NavBar extends React.Component {
                       <NavLink to="/history">History</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/brotherhood">Brotherhood</NavLink>
+                      <NavLink to="/brotherhood">Family</NavLink>
                     </li>
                     <li>
                       <NavLink to="/professional">Professional</NavLink>
