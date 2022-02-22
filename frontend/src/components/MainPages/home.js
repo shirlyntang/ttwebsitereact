@@ -35,7 +35,7 @@ export default class Home extends Component {
             picture={"users.svg"}
             name={"Family"}
             description={
-              "Promoting friendship and collaboration between fraternity members, family is one of the three key pillars of Theta Tau. Brothers of Theta Tau forge tightly-knit relationships through various brotherhood events, including socials, retreats, and friendly competition."
+              "Promoting friendship and collaboration between fraternity members, family is one of the three key pillars of Theta Tau. Members of Theta Tau forge tightly-knit relationships through various brotherhood events, including socials, retreats, and friendly competition."
             }
           />
         </div>
