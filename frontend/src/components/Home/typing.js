@@ -25,7 +25,7 @@ class Typing extends Component {
                 .<br />
                 <Typist.Delay ms={500} />
               </span>{" "}
-              Brotherhood
+              Family
               <span className="accents">.</span>
             </span>
           </Typist>
