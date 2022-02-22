@@ -19,7 +19,7 @@ const Brotherhood = () => {
         </p>
       </div>
       <div className="bro-h">
-        <span id="bro-h2">Our Brothers</span>
+        <span id="bro-h2">Family</span>
       </div>
       <div className="bro-collage">
         <BrotherhoodCollage />
