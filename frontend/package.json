@@ -18,7 +18,7 @@
     "react-dropzone": "^4.3.0",
     "react-grid-gallery": "^0.5.3",
     "react-images": "^0.5.19",
-    "react-native": "^0.57.5",
+    "react-native": "^0.71.3",
     "react-native-images-collage": "^3.0.3",
     "react-native-photo-grid": "0.0.2",
     "react-redux": "^5.1.1",
